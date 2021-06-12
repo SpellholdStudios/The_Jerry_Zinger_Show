@@ -56,19 +56,24 @@
 ## <a name="versions" id="versions"></a>Version History
 
 ##### Version 5 &nbsp;(June 12, 2021)
-- Added *yoshimo.ini* metadata file to support AL|EN's "Project Infinity".
+- Added *jz.ini* metadata file to support AL|EN's "Project Infinity".
 - Renamed *Setup-JZ.tp2* -> *jz.tp2* to support AL|EN's "Project Infinity".
 - Replaced `AUTHOR` keyword with `SUPPORT`.
 - Added `VERSION` keyword.
 - Replaced `REQUIRE_FILE` with `REQUIRE_PREDICATE` condition to avoid installing the mod in inaccurate games.
 - Added component `DESIGNATED` number and "*yoshimo_friendship*" `LABEL`.
 - `README` command now accepts translated files.
+- Externalized tp2 code into *main_component.tpa* library for more comfortable readability and maintenance.
+- Replaced deprecated old-school `DECOMPILE_DLG_TO_D` plus `COMPILE_D_TO_DLG` and `DECOMPILE_BCS_TO_BAF` plus `COMPILE_BAF_TO_BCS` processes with more accurate `DECOMPILE_AND_PATCH` command.
 - Fixed barkeeper name incorrectly displayed when hovering over it bug.
 - Updated deprecated modding tools links.
-- Updated Russian translation.
-- Updated and renamed readme files to *yoshimofriendship-readme-%LANGUAGE%.html*.
+- Fixed typos (Gwendolyne).
+- Updated Russian translation (by Austin).
+- Updated, renamed readme file to *jz-readme-english.html* and moved it into new :file_folder: readme.
 - Lower cased files.
 - Included Linux and macOS versions in the same package (thanks AL|EN!).
+- Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
+- Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
 - Transfered mod to Spellhold Studios GitHub account.
 
