@@ -1,0 +1,16 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		Wait(2)
+		ActionOverride("Anomen",POLYMORPH(FIGHTER_MALE_HUMAN))
+		ActionOverride("Anomen",MoveToPoint([458.903]))
+		ActionOverride("JZBob",MoveToPoint([1127.257]))
+          	ActionOverride("JZSteve",MoveToPoint([1300.375]))
+		Wait(6)
+		ActionOverride("JZBob",Face(3))
+		ActionOverride("JZSteve",Face(3))
+		ActionOverride("JZMaria",StartDialogueNoSet(Player1))
+		EndCutSceneMode()
+END

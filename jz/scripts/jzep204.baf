@@ -1,0 +1,57 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+    	   	CutSceneID(Player1)
+    	   	StartCutSceneMode()
+    	   	FadeToColor([20.0],0)
+    	   	Wait(4)
+    	   	SetGlobal("JZPanic","GLOBAL",0)
+    	   	// 5 * F1
+		CreateCreature("JZCRWDF1",[956.695],9)
+		CreateCreature("JZCRWDF1",[553.665],12)
+		CreateCreature("JZCRWDF1",[857.595],11)
+		CreateCreature("JZCRWDF1",[553.665],12)
+		CreateCreature("JZCRWDF1",[871.561],10)
+		// 3 * F2
+		CreateCreature("JZCRWDF2",[816.626],10)
+		CreateCreature("JZCRWDF2",[674.524],9)
+		CreateCreature("JZCRWDF2",[730.665],8)
+		// 2 * F3
+		CreateCreature("JZCRWDF3",[513.763],8)
+		CreateCreature("JZCRWDF3",[553.665],12)
+		// 1 * F4
+		CreateCreature("JZCRWDF4",[418.859],3)
+		// 4 * M1
+		CreateCreature("JZCRWDM1",[585.532],0)
+		CreateCreature("JZCRWDM1",[927.792],11)
+		CreateCreature("JZCRWDM1",[803.544],9)
+		CreateCreature("JZCRWDM1",[668.421],11)
+		// 7 * M2
+		CreateCreature("JZCRWDM2",[634.495],10)
+		CreateCreature("JZCRWDM2",[518.935],4)
+		CreateCreature("JZCRWDM2",[989.629],7)
+		CreateCreature("JZCRWDM2",[826.677],10)
+		CreateCreature("JZCRWDM2",[855.875],12)
+		CreateCreature("JZCRWDM2",[700.790],9)
+		CreateCreature("JZCRWDM2",[751.407],12)
+		// 4 * M3
+		CreateCreature("JZCRWDM3",[860.640],7)
+		CreateCreature("JZCRWDM3",[585.629],6)
+		CreateCreature("JZCRWDM3",[720.950],7)
+		CreateCreature("JZCRWDM3",[396.721],8)
+		ActionOverride("JZJerry",DestroySelf())
+		ActionOverride("JZBob",DestroySelf())
+		ActionOverride("JZSteve",DestroySelf())
+		ActionOverride("JZOgre1",DestroySelf())
+           	ActionOverride("JZOgre2",DestroySelf())
+		Wait(4)
+		FadeFromColor([20.0],0)
+		ActionOverride(Player1,MakeUnselectable(0))
+           	ActionOverride(Player2,MakeUnselectable(0))
+           	ActionOverride(Player3,MakeUnselectable(0))
+	        ActionOverride(Player4,MakeUnselectable(0))
+	        ActionOverride(Player5,MakeUnselectable(0))
+	        ActionOverride(Player6,MakeUnselectable(0))
+		EndCutSceneMode()
+END

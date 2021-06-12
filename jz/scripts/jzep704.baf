@@ -1,0 +1,15 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           FadeToColor([20.0],0)
+           ActionOverride("JZSeb",DestroySelf())
+           ActionOverride("JZSeif",DestroySelf())
+           ActionOverride("JZBubb",DestroySelf())
+           Wait(2)
+           FadeFromColor([20.0],0)
+           Wait(2)
+           ActionOverride("JZJerry",StartDialogueNoSet(Player1))
+END

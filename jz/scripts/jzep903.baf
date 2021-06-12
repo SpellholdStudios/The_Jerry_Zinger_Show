@@ -1,0 +1,11 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		   CutSceneId("JZJERRY")
+	           Wait(4)
+	           DisplayStringHead("Aerie",@3500)
+	           ActionOverride("Aerie",MoveToPoint([458.903]))
+	           Wait(8)
+	           ActionOverride("JZJerry",StartDialogueNoSet(Protagonist))
+END

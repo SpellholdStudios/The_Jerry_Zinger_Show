@@ -1,0 +1,13 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           PlaySound("JZClap")
+           ActionOverride("Korgan",MakeUnselectable(0))
+           ActionOverride("Korgan",MoveToPoint([1030.370]))
+           Wait(8)
+           ActionOverride("Korgan",FaceObject("JZJerry"))
+           Wait(1)
+           ActionOverride("JZJerry",StartDialogueNoSet(Player1))
+END

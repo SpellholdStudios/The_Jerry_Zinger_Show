@@ -20,7 +20,7 @@
 ## 
 
 #### Activité - Activity
-![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/GwendolyneFreddy/The_Jerry_Zinger_Show/latest/master?include_prereleases&style=plastic)
+![GitHub commits since latest release (by date including pre-releases)](https://img.shields.io/github/commits-since/GwendolyneFreddy/The_Jerry_Zinger_Show/latest/main?include_prereleases&style=plastic)
 ![GitHub last commit](https://img.shields.io/github/last-commit/GwendolyneFreddy/The_Jerry_Zinger_Show?color=cyan&style=plastic&label=last%20-%20dernier%20commit)
 ![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/The_Jerry_Zinger_Show?color=blueviolet&label=contributors%20-%20contributeurs&style=plastic)
 [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/The_Jerry_Zinger_Show?size=30&padding=5&bots=true)](https://badges.pufler.dev)

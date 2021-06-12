@@ -1,0 +1,8 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(6)
+           ActionOverride("JZJerry",StartDialogueNoSet(Player1))
+END

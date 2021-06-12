@@ -1,0 +1,13 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId("Anomen")
+		MoveViewObject("Anomen",VERY_FAST)
+		Wait(2)
+		ActionOverride("JZBob",MoveToObject("Anomen"))
+		Wait(4)
+		Polymorph(HARLOT_WOMAN)
+		Wait(2)
+		ActionOverride("JZKid",StartDialogueNoSet(Player1)
+END

@@ -1,0 +1,28 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           ActionOverride("JZJerry",MoveToPoint([1025.240]))
+           ActionOverride("JZBob",MoveToPoint([1025.240]))
+           ActionOverride("JZSteve",MoveToPoint([1025.240]))
+           ActionOverride("JZOgre1",MoveToPoint([1025.240]))
+           ActionOverride("JZOgre2",MoveToPoint([1025.240]))
+           ActionOverride("JZJerry",DestroySelf())
+           ActionOverride("JZBob",DestroySelf())
+           ActionOverride("JZSteve",DestroySelf())
+           ActionOverride("JZOgre1",DestroySelf())
+           ActionOverride("JZOgre2",DestroySelf())
+           ActionOverride("JZAeMo",DestroySelf())
+           ActionOverride("JZDAD1",DestroySelf())
+           ActionOverride("JZDAD2",DestroySelf())
+           Wait(2)
+           ActionOverride(Player1,MakeUnselectable(0))
+           ActionOverride(Player2,MakeUnselectable(0))
+           ActionOverride(Player3,MakeUnselectable(0))
+           ActionOverride(Player4,MakeUnselectable(0))
+           ActionOverride(Player5,MakeUnselectable(0))
+           ActionOverride(Player6,MakeUnselectable(0))
+           EndCutSceneMode()
+END

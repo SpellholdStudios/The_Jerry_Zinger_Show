@@ -1,0 +1,20 @@
+IF
+  See([PC])
+  Allegiance(Myself,NEUTRAL)
+  Global("point","LOCALS",0)
+  Or(2)
+  GlobalTimerNotExpired("JZShow","GLOBAL")
+  !GlobalTimerNotExpired("JZShow","GLOBAL")
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@3100)
+    StartTimer(101,5)
+    SetGlobal("point","LOCALS",1)
+END
+
+IF
+    TookDamage()
+THEN
+    RESPONSE #100
+    	 DisplayStringHead(Myself,@3101)
+END

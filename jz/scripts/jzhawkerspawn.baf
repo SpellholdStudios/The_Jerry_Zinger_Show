@@ -1,0 +1,7 @@
+IF
+Global("JZHawkerSpawn","AR0700",0)
+THEN
+RESPONSE #100
+CreateCreature("JZHawker",[3276.559],0)
+SetGlobal("JZHawkerSpawn","AR0700",1)
+END

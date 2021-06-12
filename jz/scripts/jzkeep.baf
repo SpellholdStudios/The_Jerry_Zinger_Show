@@ -1,0 +1,13 @@
+IF
+    TookDamage()
+THEN
+    RESPONSE #100
+    	 DisplayStringHead(Myself,@3101)
+END
+
+IF
+     Global("JZPanic","GLOBAL",2)
+THEN
+     RESPONSE #100
+	  DestroySelf()
+END

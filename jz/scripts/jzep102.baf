@@ -1,0 +1,13 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           PlaySound("JZBoo")
+           Wait(2)
+           CreateCreature("JZJon",[1025.240],0)
+           ActionOverride("JZJon",DestroyItem("STAF01"))
+           ActionOverride("JZJon",MoveToPoint([1030.370]))
+           Wait(4)
+           ActionOverride("JZJon",StartDialogueNoSet(Player1))
+END

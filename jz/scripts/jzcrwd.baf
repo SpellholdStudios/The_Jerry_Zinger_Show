@@ -1,0 +1,142 @@
+IF
+     Global("JZBoo","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3000)
+END
+
+IF
+     Global("JZClap","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3001)
+END
+
+IF
+     Global("JZClap","GLOBAL",1)
+     RandomNum(3,2)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3002)
+END
+
+IF
+     Global("JZFight","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3003)
+END
+
+IF
+     Global("JZFight","GLOBAL",1)
+     RandomNum(3,2)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3004)
+END
+
+IF
+     Global("JZPanic","GLOBAL",1)
+THEN
+     RESPONSE #100
+     	   Panic()
+     	   EscapeAreaDestroy(6)
+END
+
+IF
+     Global("JZPanic","GLOBAL",2)
+THEN
+     RESPONSE #100
+	  DestroySelf()
+END
+
+IF
+     Global("JZSecrets","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3005)
+END
+
+IF
+     Global("JZLesbians","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3006)
+END
+
+IF
+     Global("JZCat","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3007)
+END
+
+IF
+     Global("JZAw","GLOBAL",1)
+     RandomNum(3,2)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3008)
+END
+
+IF
+     Global("JZAw","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3009)
+END
+
+IF
+     Global("JZSebSteve","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3010)
+END
+
+IF
+     Global("JZSebSteve","GLOBAL",1)
+     RandomNum(3,2)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3011)
+END
+
+IF
+     Global("JZStrip","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3012)
+END
+
+IF
+     Global("JZLaugh","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3013)
+END
+
+IF
+     Global("JZLaugh","GLOBAL",1)
+     RandomNum(3,2)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3014)
+END
+
+IF
+     Global("JZGasp","GLOBAL",1)
+     RandomNum(3,1)
+THEN
+     RESPONSE #100
+     	   DisplayStringHead(Myself,@3015)
+END

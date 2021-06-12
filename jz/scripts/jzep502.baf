@@ -1,0 +1,10 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneID("JZNewb")
+		Wait(2)
+		ActionOverride("JZJerry",DisplayStringHead(Myself,@3300))
+		Dialogue("JZJerry")
+		Wait(2)
+END

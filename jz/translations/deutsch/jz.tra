@@ -1,0 +1,423 @@
+// ------------------------------------------------------------------------------------------------------------------------
+// tp2
+// ------------------------------------------------------------------------------------------------------------------------
+@0   = ~Die Jerry Zinger Show~
+@1   = ~Jerry Zinger~
+@2   = ~Steve der Oger~
+@3   = ~Bob der Oger~
+@4   = ~Empfangsdame~
+@5   = ~Club~
+@6   = ~Oger-Wache~
+@7   = ~Steve~
+@8   = ~Sebastian~
+@9   = ~Rowdy-Zuschauer~
+@10  = ~Zuschauer~
+@11  = ~Barkeeper~
+@12  = ~Jerry Zinger Studios: Seiteneingang für Zuschauer in der Höhle der Sieben Geier.~
+@13  = ~Aeries Mutter~
+@14  = ~Aeries Vater~
+@15  = ~Aeries Wirklicher Vater~
+@16  = ~Kind~
+@17  = ~Zuschauer~
+@18  = ~Noob~
+@19  = ~Verzögerung zwischen den Episoden entfernen~
+@22  = ~Ihr müsst die Jerry Zinger Show installiert haben.~
+@23  = ~Tretet ein in die Jerry Zinger Show!~
+@24  = ~Kommt schon, kommt alle! Die Jerry Zinger Show, hier entlang.~
+@25  = ~Throne of Bhaal required.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP1 - "Mein Ex ist ein böses Genie" (Irenicus, Ellesime)
+// ------------------------------------------------------------------------------------------------------------------------
+@100  = ~Okay, Leute, begrüßen wir unseren ersten Gast. Er ist ein böses Genie, dessen Ziel es ist, eine Stadt zu zerstören.~ [JZ101]
+@101  = ~Einen großen Applaus für Jon Irenicus!~ [JZ102]
+@102  = ~Hi, Jerry. Klasse Sendung.~ [JZBLANK]
+@103  = ~Nun, ich habe gehört, dass Ihr irgendetwas plant. Was könnt Ihr uns darüber erzählen?~ [JZ103]
+@104  = ~Ich werde Rache an dieser Schlampe Ellesime nehmen! Dass ich <CHARNAME>s Seele gestohlen habe, war der erste Schritt auf dem Weg zu-~
+@105  = ~Nun, Jon, wir haben eine Überraschung für Euch. Hier ist... Ellesime!~ [JZ104]
+@106  = ~Hallo, Jon.~
+@107  = ~Ihr wagt es, mir unter die Augen zu treten? Ihr habt mich verbannt! Erst musste ich auf dem Sofa schlafen, dann habt Ihr meine Seele gestohlen, und jetzt DAS!~
+@108  = ~Jon, ich habe nur versucht, das beste für Suldanessalar zu tun-~
+@109  = ~Dumme Kuh!~
+@110  = ~Was zum *piep* denkt Ihr eigentlich wer Ihr seid, Ihr *piep* *piep*?! Ihr verdammtes Stück *piep*!~ [JZBEEP3]
+@111  = ~Heilige Sch-~
+@112  = ~Nun... Ich denke, heute haben wir gelernt, dass ein bisschen Wiedergutmachung jeder Beziehung gut tut. Und damit sage ich auf Wiedersehen, bis zum nächsten Mal.~ [JZ105]
+@113  = ~Mein Ex ist ein böses Genie!
+Wer hätte das gedacht? Heute sah ich in der Jerry Zinger Show keinen anderen als Irenicus! Er schlug eine Frau namens Ellesime und die Sicherheitsmitarbeiter zusammen, bevor er wieder verschwand. Ziemlich beeindruckend; ich muss ihm mit äußerster Vorsicht begegnen.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP2 - "Gespanntes Rassenverhältnis" - (Korgan)
+// ------------------------------------------------------------------------------------------------------------------------
+@200  = ~Willkommen zur Jerry Zinger Show! Heißen wir den berühmten Raufbold und Krieger Korgan willkommen!~ [JZ201]
+@201  = ~Nun, ich glaube, Ihr habt etwas zum Thema "Gespanntes Rassenverhältnis" zu sagen, stimmt das?~ [JZ202]
+@202  = ~Jep! Ich hasse Elfen, Langbeine und die Bewohner Amns.~
+@203  = ~Genau, nun, zufällig haben wir hier ein paar Elfen, einige "Langbeine"... also... äh..., Menschen, und unsere Publikum besteht zum Großteil aus Bürgern Amns.~ [JZ203]
+@204  = ~So, und hier haben wir eine Axt. Also, sagt mir, was werdet Ihr damit tun?~ [JZ204]
+@205  = ~Los geht's!~
+@206  = ~Ich denke, wir alle können viel aus der heutigen Sendung lernen. Zurückhaltung und Toleranz sind sehr wichtig, und, hey, jeder von uns muss mal Dampf ablassen. Bis zum nächsten Mal!~ [JZ205]
+@207  = ~Gespanntes Rassenverhältnis
+Korgan verfiel heute in der Jerry Zinger Show in einen Tötungsrausch. Brachte viele Leute um. Sehr peinlich. Ich muss ihn darum bitten, sich nicht mehr so gehen zu lassen.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP3 - "Auf und davon mit meinem Geliebten" (Rumar)
+// ------------------------------------------------------------------------------------------------------------------------
+@300  = ~Heute begrüßen wir Priss, Rumar und Tiana im Studio!~ [JZ301]
+@301  = ~Was? Aber ich dachte, Ihr wärt tot!~ [JZRUMAR1]
+@302  = ~Äh... hm...~
+@303  = ~Mh... nun...~
+@304  = ~Gibt es etwas, dass ihr beide Rumar verheimlicht?~ [JZ302]
+@305  = ~Es war nur ein Trick. Wir haben einen dieser Frösche verwendet, die Blut spritzen können...~
+@306  = ~Wisst Ihr Rumar, wir verlassen Euch. Wir werden zusammen fortgehen.~
+@307  = ~Wir lieben einander.~
+@308  = ~(küsst Priss)~ [JZKISS]
+@309  = ~(streichelt Tiana zärtlich)~
+@310  = ~Aber... warum? Die Täuschung? Die Schauspielerei? Bei der Liebe Helms, warum?~ [JZRUMAR2]
+@311  = ~Wir wollten Euch die Schande ersparen, dass Euch sowohl die Frau als auch die Geliebte davonlaufen.~
+@312  = ~Wir wollten Euch nicht öffentlich erniedrigen!~
+@313  = ~Wenn Eure Freunde davon erfahren hätten, Rumar...~
+@314  = ~Hätten sie herausgefunden, dass... oh.~
+@315  = ~(ähem)~ [JZ303]
+@316  = ~Nun, Tiana, Priss, es war wirklich süß von Euch, an mich zu denken... Ich bin noch ganz überrumpelt. Ich möchte Euch beiden von ganzem Herzen alles Gute wünschen.~ [JZRUMAR3]
+@317  = ~Aber... Ihr erinnert Euch an diese adeligen Freunde, mit denen ich meine Zeit verbrachte? Ähm... ist Euch nie aufgefallen, dass wir Unmengen von Zeit mit Feiern verbracht haben? Ich meine... wir tragen ziemlich oft rosafarbene Kleidung!~ [JZRUMAR4]
+@318  = ~Nun, ja...~
+@319  = ~Also wisst Ihr davon?~ [JZRUMAR7]
+@320  = ~Wovon?~
+@321  = ~Ach nichts! Na dann, lebt wohl, und viel Glück.~
+@322  = ~Rumar, Schatz! Jetzt können wir endlich zusammen sein, ohne dass Eure - urgh - Frauen Schwierigkeiten machen!~ [JZWILLY1]
+@323  = ~Sir William! Nun, es scheint, dass Maria nicht gelogen hat, als sie behauptete, Ihre Beziehung zu Sir William sei rein platonisch! Ich danke Euch, <CHARNAME>, dass Ihr mir geraten habt, das Gesetz nicht einzuschalten!~
+@324  = ~Wenn ich zurückschaue, hätte ich eigentlich angesichts der rosafarbenen Strümpfe und der hellgrünen Tunika schon misstrauisch werden sollen.~
+@325  = ~Thorpe, Schatz, ja!~ [JZRUMAR6]
+@326  = ~Nun, der Anblick zweier endlich vereinter Paare ist fast so schön wie mein Bankguthaben. Ich denke, wir sind alle zutiefst bewegt, also, ohne viel weiteres Gerede, bis zum nächsten Mal!~ [JZ304]
+@327  = ~Auf und davon mit meinem Geliebten.
+Heute sah ich in der Jerry Zinger Show zwei glücklich vereinte Paare. Das Publikum nahm dies aus irgendeinem Grund äußerst begeistert auf.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP4 - "Wiedervereinte Familien" (Aerie)
+// ------------------------------------------------------------------------------------------------------------------------
+@400  = ~Guten Tag, und willkommen zur Jerry Zinger Show. Heute begrüßen wir als ersten Gast eine wunderschöne elfische Magierin.~ [JZ401]
+@401  = ~Ein herzliches Willkommen für... Aerie!~ [JZ402]
+@402  = ~(errötet) Hallo, Jerry.~ [JZBLANK]
+@403  = ~Nun, Aerie, in Eurer Kindheit wurdet Ihr durch Sklavenhändler von Eurer Familie getrennt. Ihr wurdet in einem Käfig gefangen gehalten, und schließlich mussten Euch die Flügel abgeschnitten werden. Ihr habt Eure Eltern nie wieder gesehen, und mittlerweile denken sie zweifellos, dass Ihr tot seid...~ [JZ403]
+@404  = ~Nun, wir haben eine große Überraschung für Euch! Hier sind AERIES ELTERN!~ [JZ404]
+@405  = ~Mutter? Aber...~ [JZBLANK]
+@406  = ~Aerie (umarm)!~
+@407  = ~Okay, und hier ist AERIES VATER!~ [JZ405]
+@408  = ~(umarm)~ [JZBLANK]
+@409  = ~(umarm)~
+@410  = ~(wird umarmt)~ [JZBLANK]
+@411  = ~Mutter... Vater... Ich bin so glücklich!~
+@412  = ~Meine Damen und Herren, einen großen Applaus für unsere wiedervereinte Familie! Wer sagt da noch, wir würden in der Jerry Zinger Show nie etwas Nützliches tun? Aber jetzt haben Aeries Eltern ihrer liebreizenden Tochter etwas Spektakuläres zu sagen, also bis zum nächsten Mal (zwinker).~ [JZ406]
+@413  = ~Wiedervereinte Familien 
+Jerry Zinger hat Aerie und ihre Familie wieder zusammengeführt! Unglaublich, nach all den Jahren, die sie getrennt waren. Anscheinend wollen sie Aerie etwas enthüllen, aber wir müssen die Show ein weiteres Mal besuchen, um herauszufinden, was das ist.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP5 - (Namenlos)
+// ------------------------------------------------------------------------------------------------------------------------
+@500  = ~Dies ist die Jerry Zinger Show, und ich bin Jerry Zinger! Heute heiße ich Atkatlas Lesben-Wackelpudding-Wrestlingteam willkommen!~ [JZ501]
+@501  = ~Heya, Cousine. Wie war die heutige Ausbeute?~
+@502  = ~Nun, wir haben fast einen halben Bund Steckrüben bekommen, aber wie üblich sind all die Tomaten zerplatzt. Diese hier habe ich nur für Euch aufgehoben, Cousine, ich weiß ja, wie sehr Ihr sie liebt.~
+@503  = ~Danke! Ich weiß das zu würdigen, immerhin muss ich morgen das Ziel spielen.~
+@504  = ~Jep, das ist wirklich die beste Idee, die Ihr je hatte, Cousinchen! Alles, was wir tun müssen, ist, uns wie Idioten zu benehmen, und schon werfen sie uns Essen zu.~
+@505  = ~Genau. Das ist ein klassisches Beispiel für den dialektischen Kampf zwischen dem am Existenzminimum lebenden Landarbeiter und dem industrialisierten Stadtbewohner. Ihre Leben sind so bemitleidenswert und unbedeutend, dass sie ihre Feindseligkeit auf jede soziale Schicht projizieren, die sie als unter sich befindlich ansehen. Wir müssen lediglich ihre plumpen Vorstellungen von sozialer Überlegenheit befriedigen, und ganz automatisch werden wir zur Verkörperung all dessen, was sie an sich selbst hassen - Vorurteile, Gier, Dummheit und Wolllust - und dann werfen sie Gemüse nach uns!~
+@506  = ~Das einzige, was uns wirklich fehlt, ist ein Schildamulett, damit das Gemüse nicht so weh tut, und dann ist es nur noch pures geschenktes Gold!~
+@507  = ~Richtig... Ich frage mich, wie viel wir wohl für die heutige Ausbeute im Gnomenghetto bekommen? Sind die Sachen von gestern fertig für den Verkauf?~
+@508  = ~Sie haben über Nacht im Waschzuber gelegen, also haben sie wahrscheinlich noch Wasser aufgesogen und ein paar Pfund zugelegt. Zeit, zu verkaufen!~
+@509  = ~Gut! Ich muss sagen, dass ich Steckrüben nicht auf eine solche Weise verwendet gesehen habe, seit mein Großcousin Archie Familienangehörige einstellte, die sich in den Rüben versteckten, um das Gewicht zu erhöhen. Er besaß einen Gemüseladen auf dem Marktplatz, wisst Ihr. Nun, das war ein Gnom mit wahrem Geschäftssinn!~
+@510  = ~Ganz sicher, Jan. Los, gehen wir.~
+@511  = ~SCHWEIGT, DÄMON!~
+@512  = ~Oh, ich nehme an, es lebt.~
+@513  = ~(Sie angreifen)~
+@514  = ~Hallo! Wow, Ihr seid Jerry Zinger!~
+@515  = ~Ich liebe diese Sendung!~
+@516  = ~Ihr habt hier ein paar wirklich seltsame Typen, was?~ [GENMG15]
+@517  = ~Ich habe eine Menge Probleme, über die ich sprechen könnte, wenn Ihr wollt. Wollt Ihr, dass ich über meine Probleme rede?~
+@518  = ~WOW! Ist die Keule da echt?~ [GENMG15]
+@519  = ~He, sollten hier nicht irgendwo Lesben sein?~
+@520  = ~Ist das da drüber wirklich <CHARNAME>? Das ist SO cool...~ [GENMG15]
+@521  = ~Schaut mich nicht so an...~
+@522  = ~Ihr macht mir Angst!~ [GENMG15]
+@523  = ~Äh... nun, ich fürchte, damit ist unsere Sendezeit auch wieder vorbei.~ [JZ502]
+@524  = ~Jerry Zinger Show
+Irgendein seltsamer Typ betrat die Bühne der Jerry Zinger Show. Das Publikum bombardierte ihn mit fauligem Obst, bis er wieder verschwand. Was bei den Höllen...?~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP6 - "Ritter in Damenunterwäsche, und Frauen, die darauf stehen" (Keldorn)
+// ------------------------------------------------------------------------------------------------------------------------
+@600  = ~Sehen sie in der heutigen Sendung Ritter, die ungehörige Unterwäsche tragen, und die Frauen, die genau das lieben! Heißen wir Sir Keldorn Firecam und Sir Ryan Trawl willkommen!~ [JZ601]
+@601  = ~Auch Anomen Delryn wird uns einen kurzen Gastbesuch abstatten!~ [JZ602]
+@602  = ~Keldorn, was soll das alles?~
+@603  = ~Maria! Was macht Ihr hier?~
+@604  = ~(ähem) Das ist jetzt nicht so wichtig.~ [JZ603]
+@605  = ~"Ungehörige Unterwäsche"? Keldorn, dieser abscheuliche, widerliche Mann hat Euch aufs Schlimmste beschimpft, in einem Schwall grausamer Verleumdungen und ekelhafter Lügen und Unwahrheiten! Dafür solltet Ihr ihn in zwei Hälften spalten!~
+@606  = ~(errötet) Ähem!~
+@607  = ~KELDORN FIRECAM! IHR WOLLT DOCH NICHT ETWA SAGEN, DASS DIESE BESCHÄMENDE ÄUßERUNG DER WAHRHEIT ENTSPRICHT?~
+@608  = ~Ihr versteht das nicht, Liebste... es hat alles mit der Rüstung zu tun.~
+@609  = ~MIT DER RÜSTUNG?~
+@610  = ~Ja, mit der Rüstung. Ihr habt es selbst gesehen, Maria, als Ihr mir geholfen habt, den Gambeson anzulegen.~
+@611  = ~Den Gambeson?~
+@612  = ~Ja, den Gambeson... er besteht aus Dutzenden Schichten dicken Wollfilzes, so dick, dass es Jahre dauert, ihn zu trocknen, und Jahre, sich daran zu gewöhnen. Das Jucken des kratzigen Wollfilzes jedoch bleibt immer zurück. An Armen, Beinen und dem Oberkörper ist das schlimm genug, aber am... Ihr-wisst-schon eines Mannes...~
+@613  = ~Oh, ich verstehe!~
+@614  = ~Ich weiß, dass der Gambeson nötig ist, um Schläge gegen Eure Rüstung abzufedern, und ich weiß genau, wie unbequem und übelriechend dieses Ding ist... und ich verstehe, in welcher Lage Ihr bezüglich Eures Ihr-wisst-schons seid.~
+@615  = ~Nun, so kam es, dass ich vor einigen Jahren - es ist mir wirklich peinlich, das zuzugeben - einige Eurer seidenen Unterhosen mitnahm, bevor ich auf einen Feldzug für den Orden des Strahlenden Herzens auszog. Andernfalls hätte ich mich bei dem Versuch, meinen Ihr-wisst-schon zu kratzen, lächerlich gemacht. So konnte ich meine Würde bewahren und den langen Feldzug erträglich machen. Nun, einige meiner Waffenbrüder fanden es dennoch heraus.~
+@616  = ~Also habt Ihr und nicht Vesper die roten Spitzenhöschen aus diesem durchsichtigen Stoff gestohlen, die ich mir aus Calimshan bestellt hatte?~
+@617  = ~Ich trage sie sogar jetzt.~
+@618  = ~Ich kann Euch versichern, dass ich keinerlei Reizwäsche trage!~
+@619  = ~Uh...~ [JZ604]
+@620  = ~Ieeeh!  Das Haar dieser Frau macht mir Angst!~ [JZBABE]
+@621  = ~Ich schwöre, das es sich hier um einen furchtbaren Fehler handelt! Ich würde etwas derartiges niemals tragen!~
+@622  = ~Oh, Liebster. Warum habt Ihr nicht einfach ein paar seidene Unterkleider bei unserem Schneider bestellt?~
+@623  = ~Maria, es handelt sich hier vor allem um eine militärische Notwendigkeit, die dem Komfort und der Hygiene dient!~
+@624  = ~Ja, genau.~ [JZ605]
+@625  = ~Ruhe, Ihr Verräter!~
+@626  = ~Äh, aber nicht alle meine Seidenhöschen sind sonderlich bequem. Wisst Ihr, ich vermisse einige meiner Tangas.~
+@627  = ~(ähem) Ich fürchte, darüber müsst Ihr mit Vesper sprechen.~
+@628  = ~(flüstert) Danke, Keldorn.~
+@629  = ~Nun, dieses Mal verzeihe ich Euch, aber nur...~
+@630  = ~...nur wenn Ihr sie heute Nacht für mich tragt...~
+@631  = ~Abgemacht!~
+@632  = ~Ich liebe Euch, Keldorn Firecam!~
+@633  = ~Und ich liebe Euch, Maria Priscilla Firecam!~
+@634  = ~Nun, es tut gut, ein glückliches Paar zu sehen. Denkt dran, Leute, in der Jerry Zinger Show findet sich für Eure intimen Probleme oder die Euer Freunde immer eine Lösung!~ [JZ606]
+@635  = ~Ritter in Unterwäsche
+Keldorn möchte noch immer nicht über die Enthüllungen der heutige Jerry Zinger Show sprechen. Das erklärt wohl, warum er seine Rüstung stets heimlich anlegt. Reizwäsche, also wirklich!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP7 - "Latex-Gnome" (SConrad, Seifer)
+// ------------------------------------------------------------------------------------------------------------------------
+@700  = ~Willkommen zur Jerry Zinger Show! Unsere Gäste heute sind Sebastian und Steve, zwei gnomische Banditen!~ [JZ701]
+@701  = ~Rückt Euer Gold raus, oder Eure Kniescheiben gehören mir!~ [JZSEB01]
+@702  = ~KNIE!~ [JZSF1]
+@703  = ~Nein, Steve, es heißt "Eure Kniescheiben gehören mir!". Lern es endlich.~ [JZSEB02]
+@704  = ~Hm... nun, Sebastian, es scheint, Euer Freund ist ein wenig...~ [JZ702]
+@705  = ~Langsam. Aber ein feiner Kerl, oder?~ [JZSEB03]
+@706  = ~Also, erzählt uns, wie läuft das Geschäft?~ [JZ703]
+@707  = ~Es läuft gut, Jerry, unglaublich gut. Mittlerweile sind wir so berühmt, dass wir uns sogar einen Namen zugelegt haben, bei dem sich alle Kaufleute auf der Straße nach Handelstreff in die Hosen machen!~ [JZSEB04]
+@708  = ~DIE GNOME, DIE "KNIE" SAGEN!~ [JZSF2]
+@709  = ~Ich verstehe...~ [JZ704]
+@710  = ~Tja, es funktioniert, oder?~ [JZSEB05]
+@711  = ~Nun, Sebastian, was war bis jetzt Eure größte Beute?~ [JZ705]
+@712  = ~Hm... nun, erst kürzlich erbeuteten wir eine große Ladung-~ [JZSEB06]
+@713  = ~BÜSCHE!~ [JZSF3]
+@714  = ~Genau! Büsche, richtig... diese speziellen maztlanischen Büsche lassen sich für tausend Goldstücke das Stück verkaufen - der Weg zum großen Geld!~ [JZSEB07]
+@715  = ~Es geht Euch also beiden gut, Sebastian? Ihr scheffelt Unmengen von Gold?~ [JZ706]
+@716  = ~Natürlich! Möge man mich zwingen, mit einem Hering einen Baum zu fällen, wenn ich lüge!~ [JZSEB08]
+@717  = ~Ist dem so? Hören wir, was unser Überraschungsgast dazu zu sagen hat...~ [JZ707]
+@718  = ~Heißen wir Bubbles auf der Bühne willkommen!~ [JZ708]
+@719  = ~Hallo, Steve! Hallo, Sebastian.~
+@720  = ~Ähm... wovon redet Ihr, Bubbles, sofern das wirklich Euer Name ist?! Ich habe Euch noch nie gesehen, nicht ein einziges Mal!~ [JZSEB09]
+@721  = ~Knie?~ [JZSF4]
+@722  = ~Hey, was sagt Ihr denn da? Ich bin's, Bubbles... Eure Tänzerin in der Männerrevue, mit Ihr immer am Neunten des Monats auf der "besonderen Bühne" der Kupferkrone auftretet!~
+@723  = ~Ich habe nicht die geringste Ahnung, wovon Ihr sprecht!~ [JZSEB10]
+@724  = ~Natürlich habt Ihr das. Wisst Ihr nicht mehr, wie Ihr mir erzählt habt, dass das Banditenhandwerk, das Ihr und Euer Freund betreibt, so wenig abwirft, dass Ihr nebenher noch in Madam Nins Männer-Striprevuen auftreten müsst?~
+@725  = ~Nun, ich habe Euch gefragt, wie eng eigentlich dieses Latexkleid ist, in das sie Euch gesteckt haben, und ich habe Euch ein paar Tipps zu der blonden Pferdeschwanzperücke gegeben und Euch gezeigt, wie man Puder, Rouge und diese riesigen falschen Wimpern aufträgt...~
+@726  = ~(glucks)~ [JZSEB11]
+@727  = ~Und Ihr habt gejammert, wie sehr Eure Kehle schmerzt, wenn Ihr mit so hoher Stimme singt, besonders in diesem Latexkleid, und wie Ihr immer das Gefühl habt, aus der Rolle zu fallen, wenn Ihr "Schönes Lollipop-Schiff" singt und während der Nummer tanzt und steppt...~
+@728  = ~(schluchz)~ [JZSEB12]
+@729  = ~(umarmt Sebastian)~
+@730  = ~Nun, Leute, wie es scheint, lohnt sich das Verbrechen nicht. Jedenfalls nicht sehr. Vielen Dank, dass ihr alle gekommen seid, wir sehen uns beim nächsten Mal! Mein Name ist Jerry Zinger.~ [JZ709]
+@731  = ~Latex-Gnome
+Es ist traurig, so großartige Gnome zu so verwerflichen Tätigkeiten gezwungen zu sehen.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP8 - "Die Geliebte meines Ehemanns" (Viconia, Keldorn)
+// ------------------------------------------------------------------------------------------------------------------------
+@800  = ~Er ist der beste. Der Traum aller Frauen. Er ist der Whiskey unter den Männern - mit dem Alter wird er immer besser!~ [JZ801]
+@801  = ~Meine Damen und Herren, ein herzliches Willkommen für Sir Keldorn Firecam!~ [JZ802]
+@802  = ~Guten Tag, Jerry.~ [JZBLANK]
+@803  = ~Ich habe gehört, Ihr seid äußerst beschäftigt damit, Aufgaben für den Orden des Strahlenden Herzens zu erledigen. Da bleibt nicht viel Zeit für die Liebe übrig, was?~ [JZ803]
+@804  = ~Ein Paladin des Ordens des Strahlenden Herzens zu sein, ist keine leichte Arbeit, Jerry.~
+@805  = ~Nun, was würdet Ihr sagen, wenn ich Euch erzähle, dass hinter der Bühne jemand wartet, den Ihr schon seid lange Zeit nicht mehr gesehen habt?~ [JZ804]
+@806  = ~Wirklich? Wer?~
+@807  = ~Nun, Eure Frau natürlich! Einen großen Applaus für Lady Firecam!~ [JZ805]
+@808  = ~Hallo, Jerry. Vielen Dank für die Einladung.~
+@809  = ~Maria! Ich bin überglücklich, Euch zu sehen.~
+@810  = ~Ja, ja.~
+@811  = ~Ähm? Maria?~
+@812  = ~Nun, Lady Maria, was wollt Ihr Eurem Ehemann gern sagen?~ [JZ806]
+@813  = ~Ich lasse mich scheiden, Ihr nichtsnutziger, fremdgehender, alter *piep*!~ [JZBEEP2]
+@814  = ~Aber... Maria! Wovon redet Ihr?~ [JZBLANK]
+@815  = ~Ich spreche von dieser Drow, die Ihr seit den letzten paar Jahren *piep*, Ihr *piep* Bastard. Orden des Strahlenden Herzens! Ha! Das ich nicht lache! Eher des strahlenden *piep*!~ [JZBEEP3]
+@816  = ~Aber ich hasse Drow, Maria. Jeder weiß das.~
+@817  = ~LÜGNER!~
+@818  = ~Nun, schauen wir mal, was die beschuldigte Drow dazu zu sagen hat. Herzlich willkommen, Viconia DeVir!~ [JZ807]
+@819  = ~Jerry, ich verlange eine Erklärung. Diese Abscheulichkeit würde ich im ganzen Leben nicht berühren!~
+@820  = ~Abscheulichkeit? Als Ihr das letzte mal Euren *piep* geleckt haben wolltet, war ich keine Abscheulichkeit, Ihr *piep*! Wollt Ihr diesen *piep*, Frau?~ [JZBEEP2]
+@821  = ~Ich will ihn nicht! Ich will nur, dass man ihm den *piep* aus dem Leib reißt!~ [JZBEEP3]
+@822  = ~Verdammt Lügen spuckende Harpyie!~
+@823  = ~Nun, Leute, ein weiteres glücklich vereintes Paar!~ [JZ808]
+@824  = ~Ich grüße Euch, Männchen.~
+@825  = ~Keldorn... Schatz! Hi, heiße Unterhosen.~
+@826  = ~(schluchz) Lügen, alles Lügen...~
+@827  = ~(schluchz) Es ist in Ordnung, Keldorn, Liebster. Ich glaube Euch. Werdet... werdet Ihr mich nach Hause begleiten?~
+@828  = ~Ich fürchte, das geht nicht. <CHARNAME> und ich müssen jetzt aufbrechen. Bis bald, Liebste.~
+@829  = ~Die Geliebte meines Ehemanns
+Es wird immer schwieriger, Viconia und Keldorn daran zu hindern, einander an die Gurgel zu gehen. Sie haben jetzt sogar schon öffentlich in der Jerry Zinger Show miteinander gekämpft!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// EP9 - "Wer ist Euer Vater?" (Aerie)
+// ------------------------------------------------------------------------------------------------------------------------
+@900  = ~Willkommen zurück zur Show!~ [JZ901]
+@901  = ~Nun, Aerie, ich denke, Eure Mutter möchte Euch etwas sagen...~ [JZ902]
+@902  = ~Was ist los, Mutter?~
+@903  = ~Aerie, Schatz... du bist nicht... wirklich... eine Avariel.~
+@904  = ~(weinend) Meine Flügel, ich habe meine Flügel verloren...~
+@905  = ~Nein, Schatz. Weißt du, dein Vater ist nicht der Elf, an den du dich erinnerst.~
+@906  = ~Aerie, es tut mir weh, dir das zu enthüllen-~
+@907  = ~Aerie, ich bin nicht dein biologischer Vater.~ [JZDAD101]
+@908  = ~Okay, einen GROßEN APPLAUS FÜR AERIES WIRKLICHEN VATER!~ [JZ903]
+@909  = ~Hey, Kleines. Lange nicht gesehen. Ist das die Kleine?~ [JZDAD201]
+@910  = ~Hey, lasst sie in Ruhe. Sie gehört zu mir.~ [JZDAD102]
+@911  = ~Hey, wer hat Euch denn gefragt, Ihr stinkender Sohn einer *piep*?~ [JZDAD202]
+@912  = ~Bitte! Aufhören! Wir alle müssen Aerie etwas sagen.~
+@913  = ~Das stimmt. Aerie, dein ganzes Leben war eine Lüge.~ [JZDAD103]
+@914  = ~Mädchen, lass es mich so sagen: Hier bin ich, ein attraktiver Typ, kümmere mich um meinen eigenen Kram, und dann kommt plötzlich diese hinreißende Elfe, ganz in weiß, ein Körper, für den man sterben würde, ich sag's dir! Also, jedenfalls-~ [JZDAD203]
+@915  = ~Wartet! Wollt Ihr sagen, als meine Flügel abfielen, als sie sich entzündeten...~
+@916  = ~Das waren magische Prothesen. Schatz, bist du denn nicht misstrauisch geworden, als du jeden Abend die Gurte gelöst hast?~
+@917  = ~Nun, Papa hat mir erklärt, dass die Avariel nicht wirklich eine geflügelte Rasse sind, sondern dass wir lediglich die magische Kunst gemeistert haben, zu fliegen.~
+@918  = ~...~
+@919  = ~Das hast du wirklich geglaubt?~ [JZ904]
+@920  = ~Hey! Immerhin sprechen wir hier von meinem Papa. Er hatte so oft Recht, zum Beispiel, was den Großen Kürbis, den Weihnachtsmann und viele andere Dinge angeht.~
+@921  = ~Meine Güte. Schatz, es gibt keinen Großen Kürbis, und der Weihnachtsmann existiert auch nicht.~
+@922  = ~Ach wirklich? Und wer bringt mir dann immer zur Sonnenwende Geschenke? Verratet mir das!~
+@923  = ~Oh, das ist so süß!~
+@924  = ~Wenn Ihr AERIE nach ihrer Vergangenheit fragt, spricht sie voller Verwirrung von ihren widersprüchlichen Erinnerungen und den neuen Enthüllungen aus der Jerry Zinger Show. Sie hat sich immer für eine Avariel gehalten, aber in Wahrheit ist sie zur Hälfte ein Mensch, gezeugt, als ihre Mutter eine Affäre mit einem Menschen hatte. Ihre "Erinnerungen" an die Sklavenhändler, die ihre Flügel abschnitten, sind nur Fieberfantasien, die sie bekam, als sie durch die Große Westmarsch transportiert wurde. Die Narben auf ihrem Rücken stammen von einem hastigen und groben Versuch, ihre mechanischen Flügel abzunehmen. Künstliche Fluggeräte wie dieses waren eine Menge wert, und die Sklavenhändler hatten es eilig, diese wertvollen Gegenstände zu verkaufen. Dabei verletzten sie Aeries Rücken.
+
+Diese neuesten Enthüllungen über ihre Vergangenheit haben Aerie zutiefst erschüttert. Es war schwer für sie, sich mit der Wahrheit abzufinden, die genau das Gegenteil dessen war, was ihr fiebernder Geist ihr während ihrer Ohnmacht vorgaukelte. Wie ein verwundetes Tier, das sich verletzt zurückzieht, klammerte sich Aerie wider besseren Wissens zunächst an ihre grausamen Erinnerungen, welche die Rechtfertigung dafür darstellen sollten, dass sie derart schlecht behandelt wurde. Jetzt, nachdem sie die nüchterne Wahrheit kennt, kann Aerie endlich zu einer selbstbewussten Person heranwachsen und mit der Vergangenheit abschließen.~
+@925  = ~Wenn wir heute etwas gelernt haben, dann ist es, dass Ehrlichkeit in jeder Beziehung eine wichtige Rolle spielt. Vielleicht hätten Aeries Eltern in der Vergangenheit ehrlicher zu ihr sein sollen. Wahrscheinlich ist es gut, heikle Privatangelegenheiten einer breiten Öffentlichkeit zu präsentieren. Denkt darüber nach. Und damit verabschiede ich mich für heute!~ [JZ905]
+@926  = ~Wer ist Euer Vater?
+Es hat sich herausgestellt, dass Aerie keine Avariel, sondern eine Halbelfe ist. Nach all ihrem Gewimmer wurde sie in ihrer Kindheit nicht einmal missbraucht, und auch ihre Flügel sind nicht weggerottet!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Der Standarddialog
+// ------------------------------------------------------------------------------------------------------------------------
+@2000 = ~Guten Abend, <LADYLORD>. Es tut mir leid, aber wir haben keine weiteren Sendungen, denen Ihr beiwohnen könnt.~
+@2001 = ~Guten Abend, <LADYLORD>. Ich fürchte, Ihr habt die heutige Sendung bereits gesehen. Bitte kommt später noch einmal vorbei.~
+@2002 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Mein Ex ist ein böses Genie", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2003 = ~Ja, ich würde die Show sehr gern sehen.~
+@2004 = ~Ja, wir würden die Show sehr gern sehen.~
+@2005 = ~Ich fürchte, so viel Geld habe ich nicht.~
+@2006 = ~Nein danke. Nicht heute.~
+@2007 = ~Ja, <SIRMAAM>. Hier entlang, bitte...~
+@2008 = ~Ah, wie schade. Bitte kommt an einem anderen Tag noch einmal vorbei.~
+@2009 = ~Wie Ihr wünscht, <SIRMAAM>. Bitte kommt später noch einmal vorbei.~
+@2010 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Gespanntes Rassenverhältnis", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2011 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Auf und davon mit meinem Geliebten", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2012 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Wiedervereinte Familien", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2013 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Lesben-Wackelpudding-Wrestling", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2014 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Ritter in Damenunterwäsche", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2015 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Latex-Gnome", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2016 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Die Geliebte meines Ehemanns", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2017 = ~Guten Abend, <LADYLORD>. Würdet Ihr gern die heutige Sendung, "Wer ist Euer Vater", sehen? Es kostet Euch jeweils 10 Goldmünzen.~
+@2018 = ~Guten Abend, <LADYLORD>. Es tut mir leid, aber heute haben wir keine Sendung. Bitte kommt später noch einmal vorbei.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Publikums-Dialoge
+// ------------------------------------------------------------------------------------------------------------------------
+@2100 = ~Waren die Gnome schon auf der Bühne?~
+@2101 = ~Ich kann's nicht abwarten, die Lesben zu sehen!~
+@2102 = ~Nicht drängeln, es gibt genug Platz für alle.~
+@2103 = ~Was glotzt Ihr so?~
+@2104 = ~Ich bin Jerrys größter Fan! Der Größte! Der GRÖßTE!~
+@2105 = ~Oh, äh, 'tschuldigung. Bohnen zum Mittagessen.~ [JZFART]
+@2106 = ~Ich hoffe, in der nächsten Episode gibt es einen Kampf. Gewalt... das ist sexy.~
+@2107 = ~Heya, hübsches Ding. Was macht Ihr nach der Sendung?~
+@2108 = ~Würdet Ihr gern meinen kleinen Jerry sehen?~
+@2109 = ~Ich dachte, das hier wäre ein Striplokal! Ich will mein Gold zurück!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Betrunkenen-Dialoge
+// ------------------------------------------------------------------------------------------------------------------------
+@2200 = ~Diesche Show ischt die Beschte... (hicks) Jerry sollte dasch näschte Obahaupt desch Konzils der Seschs wärdn.~
+@2201 = ~Pssscht! Heutschutage jibtsch ne Menge Mädschen, die andre Mädschen küssen. Kann misch nich beschwärn!~
+@2202 = ~Mhwah, manschmal isses janz schön schwer, zu schlafn. Verdammt laut, die Schows.~
+@2203 = ~Letschte Woche sasch diesches Mädschen uff mei'm Schosch. Isch war so glücklisch, aba dann habsch ihr unta'n Rock gefascht. Aye, der Schock hat misch nüchtern gemacht.~
+@2204 = ~Noch einen davon, <GIRLBOY>.~
+@2205 = ~Gebt mir Euer Wechselgeld, dann kann ich meine Medikamente bezahlen!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Der Martkschreier-Dialog
+// ------------------------------------------------------------------------------------------------------------------------
+@2300 = ~Kommt ruhig näher! Kommt schon, kommt alle her! Seht die berühmte Jerry Show! Gleich hier entlang, <SIRMAAM>.~
+@2301 = ~Ich habe kein Interesse.~
+@2302 = ~Was ist die Jerry Zinger Show?~
+@2303 = ~Eine aufregende und amüsante Show! Sie ist jedes Mal auf andere Weise interessant und dringt bis zu den dunkelsten Geheimnissen ihrer Gäste vor.~
+@2304 = ~Klingt spannend!~
+@2305 = ~Geht einfach durch die Tür hinter mir, <SIRMAAM>.~
+@2306 = ~Gut, wie Ihr wollt. He, Ihr da drüben...~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Der Barkeeper-Dialog
+// ------------------------------------------------------------------------------------------------------------------------
+@2400 = ~Was kann ich für Euch tun, <SIRMAAM>?~
+@2401 = ~Ich möchte etwas trinken.~
+@2402 = ~Beantwortet mir ein paar Fragen.~
+@2403 = ~Ich möchte die Show sehen.~
+@2404 = ~Sicher, <SIRMAAM>.~
+@2405 = ~Fragen, was? Nun, beeilt Euch. Ich habe zahlende Gäste, um die ich mich kümmern muss.~
+@2406 = ~Was ist das für ein Ort?~
+@2407 = ~Wie kann ich mir die Show ansehen?~
+@2408 = ~Habt Ihr irgendwelche Jobangebote?~
+@2409 = ~Wer seid Ihr?~
+@2410 = ~Dies ist das Studio der Jerry Zinger Show, der Ort, an dem die Shows stattfinden. Und Ihr, <SIRMAAM>, steht direkt vor der Bar. Wollt Ihr etwas trinken?~
+@2411 = ~Ja, ich würde gern etwas trinken.~
+@2412 = ~Ich habe weitere Fragen.~
+@2413 = ~Nein, ich werde jetzt gehen. Danke für die Auskünfte.~
+@2414 = ~Redet mit der Empfangsdame am Eingang. Es kostet zehn Goldmünzen pro Kopf.~
+@2415 = ~Danke, aber ich muss los. Vielen Dank für die Auskünfte.~
+@2416 = ~Oh, ja! Ich brauche jemanden, der kellnert, jeden Abend den Boden schrubbt und mir mein Mittagessen kocht. Habt Ihr Interesse?~
+@2417 = ~Ich hätte eher auf etwas... abenteuerlicheres gehofft...~
+@2418 = ~Das ist ja lächerlich. Geht mir aus den Augen.~
+@2419 = ~Ihr habt dafür eine Menge Bewerber, was?~
+@2420 = ~He, denkt Ihr ich bin eine Arbeitsvermittlung? Ich schenke Getränke aus. Wollt Ihr einen Drink?~
+@2421 = ~Nicht so viele, wie es scheint. Oh man...~
+@2422 = ~Hä? Ich bin bloß der Barkeeper.~
+@2423 = ~Wie unhöflich! Bitte geht den zahlenden Kunden aus dem Weg, <SIRMAAM>.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Pssst... Gerüchte an der Bar... ;)
+// ------------------------------------------------------------------------------------------------------------------------
+@2500 = ~Bob der Oger ist eventuell ein getarnter Verhüllter Magier. Er wurde mehrmals mit einem Besenstiel in der Hand beobachtet, der eine rudimentäre Art von Zauberstab darstellen könnte. Vorsicht ist angeraten.~
+@2501 = ~Letzte Woche wurde ein Baby wurde mit zwei Köpfen, zwei Körpern und acht Gliedmaßen geboren. Die Mutter wird als 'erleichtert' zitiert.~
+@2502 = ~Das Produktionsteam der Jerry Zinger Show arbeitet ständig an neuen Episoden - man sagt, sie suchen sogar nach neuen Talenten.~
+@2503 = ~Der einzige Grund, warum die Empfangsdame ihren Job behält, ist, dass sie mit dem Direktor schläft. Schockierende Bevorzugung, denkt Ihr nicht auch?~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Scripts - JZCRWD.baf
+// ------------------------------------------------------------------------------------------------------------------------
+@3000 = ~Buh!~
+@3001 = ~*klatsch*~
+@3002 = ~Jaa!~
+@3003 = ~Kämpft!~
+@3004 = ~Jerry! Jerry! Jerry!~
+@3005 = ~Geheimnisse!~
+@3006 = ~Lesben!~
+@3007 = ~*pfeif*~
+@3008 = ~Wie süß *schnief*.~
+@3009 = ~Ieh...~
+@3010 = ~Seb!~
+@3011 = ~Steve!~
+@3012 = ~Zieh ihn aus!~
+@3013 = ~Hahaha!~
+@3014 = ~*lach*~
+@3015 = ~Keuch!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Scripts - JZCount.baf and JZKeep.baf
+// ------------------------------------------------------------------------------------------------------------------------
+@3100 = ~Karten! Mit den Karten hierher, bitte.~
+@3101 = ~Au! Hört auf damit, bevor ich den Sicherheitsdienst rufe.~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Cutscenes - JZEP502.baf
+// ------------------------------------------------------------------------------------------------------------------------
+@3300 = ~Wer seid Ihr? Was macht Ihr hier?~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Cutscenes - JZEP503.baf
+// ------------------------------------------------------------------------------------------------------------------------
+@3400 = ~Hilfe! Mama!~
+
+// ------------------------------------------------------------------------------------------------------------------------
+// Cutscenes - JZEP903.baf
+// ------------------------------------------------------------------------------------------------------------------------
+@3500 = ~(schluchz) WAS GEHT HIER VOR?~

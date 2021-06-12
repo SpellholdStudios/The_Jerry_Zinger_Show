@@ -1,0 +1,18 @@
+IF
+  OnCreation()
+  Global("RevealARJZ00","ARJZ00",0)
+THEN
+  RESPONSE #100
+    SetGlobal("RevealARJZ00","ARJZ00",1)
+    Explore()
+    Continue()
+END
+
+IF
+  Global("JZMovie","ARJZ00",0)
+THEN
+  RESPONSE #100
+    StartMovie("JZIntro")
+    SetGlobal("JZMovie","ARJZ00",1)
+END
+

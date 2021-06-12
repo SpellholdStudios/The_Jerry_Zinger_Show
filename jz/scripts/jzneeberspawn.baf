@@ -1,0 +1,8 @@
+IF
+	Global("JZEP5","GLOBAL",4)
+THEN
+	RESPONSE #100
+		CreateCreature("JZNewb",[3242.572],12)
+		CreateCreature("JZNeeber",[3310.588],3)
+		SetGlobal("JZEP5","GLOBAL",5)
+END

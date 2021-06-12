@@ -1,0 +1,6 @@
+IF
+    TookDamage()
+THEN
+    RESPONSE #100
+    	 PlayDead(90)
+END

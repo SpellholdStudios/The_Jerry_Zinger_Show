@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <style type="text/css">
+    /*<![CDATA[*/
+    <!-- 
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      
+      h2 {
+        display: block;
+        font-family: Verdana, Trebuchet MS, Arial, serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      
+      #maindiv address a:link,
+      #maindiv address a:visited {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      
+      #maindiv .important::before {
+        display: none;
+      }
+      
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        *margin-left: 65px;
+      }
+      
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        *margin-left: 70px;
+      }
+      
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        *float: none;
+        *margin-left: 65px;
+        line-height: 22px;
+      }
+      
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        *float: none;
+        line-height: 22px;
+      }
+      
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+        *margin: 0;
+        *padding: 0;
+      }
+      
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      
+      h4 {
+        font-size: 125%;
+      }
+      
+      h5 {
+        font-size: 100%;
+      }
+      
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      
+      a:link,
+      a:visited {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+
+    -->
+    /*]]>*/
+    </style>
+    <title>SPELLHOLD STUDIOS - The Jerry Zinger Show</title>
+  </head>
+  <body>
+    <a name="top" id="top"></a>
+    <div id="wrap">
+      <div id="header">
+        <h1>The Jerry Zinger Show</h1>
+        <strong>A Spellhold Studios mod for Baldur's Gate 2: SoA</strong>
+        <hr />
+        <p class="about">
+          Authors: <a href="mailto:sconrad@spellholdstudios.net">SConrad</a> and <a href="mailto:shed@spellholdstudios.net">Shed</a>
+        </p>
+        <p class="about">
+          <a href="http://www.spellholdstudios.net/ie/jz">Mod Website</a> &#8226;
+          <a href="http://www.shsforums.net/index.php?showforum=235/">Mod Forum</a> &#8226;
+          Version: 4
+        </p>
+        <hr />
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+		  <a href="#components">Components</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Credits</a> &middot;
+          <a href="#version">Version History</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a name="intro" id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+        <p>The Jerry Zinger Show allows the PC and his companions to view (and take part in) the live talk show of Jerry Zinger, well known Amnish celebrity! Shows are daily, and executed largely by cutscenes. The programme is as follows:</p>
+        <div class="important">
+          <ol>
+            <li>"My ex is an evil mastermind"</li>
+            <li>"Racial tension" (Korgan)</li>
+            <li>"Leaving with my lover"</li>
+            <li>"Families Reunited" (Aerie)</li>
+            <li>No name</li>
+            <li>"Knights who wear Lingerie and and the women who love them" (Keldorn)</li>
+            <li>"Latex Gnomes"</li>
+            <li>"My husband's mistress" (Keldorn)</li>
+            <li>"Who's your daddy?" (Aerie)</li>
+          </ol></strong>
+        </div>
+
+        <p>Note that the episodes featuring a NPC are only viewable if the NPC is currently in the party, and not dead. The other episodes are viewable no matter what party you have. You will not be able to choose which episode to view. They will display in the given order where possible.</p>
+        
+		<p><strong>Fully Fledged Introduction Movie!</strong><br />
+         SConrad and Jezil'jin have together created an introduction movie, and with SConrad's pioneering technique it has been included in the mod.</p>
+        
+		<p><strong>New Area!</strong><br />
+         A new area based on the Playhouse, made by BLUE_CHIP, is included in the mod. This area is the Jerry Zinger Studio where the episodes play out. The Jerry Zinger Studio is available through the the Den of Seven Vales, the inn north of the Circus in Waukeen's Promenade. The entrance is located on the south-east wall of the first floor of the inn, just slightly to the right of the point where you first enter the Den of Seven Vales.</p>
+        
+		<p><strong>Comprehensive Voicing!</strong><br />
+        Jerry Zinger is voiced by TheWizard, and SConrad and Seifer are also voicing themselves. Aerie's (two) fathers, Sir William of Thorpe, and Rumar are voiced by Shed and Tris.
+          <address>
+            <span class="footer">The Jerry Zinger Show &gt; Introduction</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a name="installation" id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+		  <p><strong>Windows</strong>
+          <div class="important">
+          The Jerry Zinger Show is packaged and installed with <a href="http://www.weidu.org">WeiDU</a> and is distributed as a NSIS-installer. To install, simply double-click the <strong>JZ-v3.exe</strong> and follow the instructions on screen.</p>
+        </div>
+		<address>
+            <span class="footer">The Jerry Zinger Show &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== C o m p o n e n t s ================== -->
+        <a name="components" id="components"></a>
+        <div class="content">
+          <h2>Components</h2>
+          <p>There is one optional component in the Jerry Zinger Show.</p>
+
+        <div class="important">
+            Remove Delay Between Episodes<br />
+            <em>This will remove the necessity to wait one day of game time between watching each episode.</em>            
+        </div>
+          <address>
+            <span class="footer">The Jerry Zinger Show &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a name="faq" id="faq"></a>
+        <div class="content">
+			<h2>Frequently Asked Questions</h2>
+			<p><strong>Q: How do I experience the Jerry Zinger mod?</strong><br />
+			A: The content of this mod occurs in the new area which can be accessed through the Den of Seven Vales, the inn north of the Circus in Waukeen's Promenade. The entrance to the new area is located on the south-east wall of the first floor of the inn, just slightly to the right of the point where you first enter the area.
+
+			<p><strong>Q: Hey, what's this? I thought this was a place for mods for the BG universe? How did I get here?</strong><br />
+			A: No, you're in the right place. This IS a mod for the BG II game.
+
+			<p><strong>Q: Well, who is this 'Jerry Zinger', and what does he do? Is he related to the Jansen clan?</strong><br />
+			A: No, he's a half-elf, and a famous television personality in Amn. He has a daily, er, 'talk show' dedicated to the ills of Western society.
+
+			<p><strong>Q: Oh, I see... He tries to help people.</strong><br />
+			A: No, he exploits them.
+
+			<p><strong>Q: Just where did you come up with this insane idea?</strong><br />
+			A: The idea was originally developed by MorningGlory but due to various circumstances, she were unable to continue the work. This resulted in Shed and SConrad taking over the project.
+
+			<p><strong>Q: What if I don't know about The Jerry Springer Show, Mr. Smarty Pants? Why should I care about this mod?</strong><br />
+			A: Mocking other's problems and situations in a humorous is an age-old mechanism of the theatre. Plus, the original show is to be taken about as seriously as will be our mod. Rumour has it that the show's absurdity is actually scripted, but we have been assured that is a false allegation, and that it portrays real people with real problems.
+
+			Jerry Springer actually appears around the world. Might not air in Tibet, however. Check out the official Jerry Springer website if you've been living in Tibet and haven't heard of it. And, of course, check out your local television listings for both daytime television and night-time viewing. Check out the <a href="http://www.jerryzingertv.com">official web site</a> for the show
+
+			<p><strong>Q: They didn't even HAVE television in Faerun! How are you gonna get around that one?</strong><br />
+			A: They did have theaters, however. The equivalent of a studio, per se. And, I doubt if they had hot tubs in Faerun, either, but in the BG II game, I distinctly remember one in Aran Linvail's suite at the Shadow Thieves headquarters. So, who knows? Maybe the Jansens have the first television in Faerun. We all know how inventive Jan can be.
+
+			<p><strong>Q: So, are you gonna have just one giant cut-scene, or what?</strong><br />
+			A: No, the original show is a daily show, and we are going to attempt to do that, too. A blend of cut-scenes and some interactive stuff as well. Want the player to get in on the action, too, you know.
+
+			<p><strong>Q: Hey, before I forget.. Just who's working on this piece of insanity?</strong><br />
+			A: The team is headed by Shed and SConrad. A full list listing everyone's contributions will be available in the <a href=#credits>Credits</a>
+          <address>
+            <span class="footer">The Jerry Zinger Show &gt; FAQ</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>		
+		
+        <!-- ================== C r e d i t s ================== -->
+        <a name="credits" id="credits"></a>
+        <div class="content">
+          <h2>Credits</h2>
+          <span class="t1">Jerry Zinger</span> <span class="t2">TheWizard</span><br />
+		  <span class="t1">SConrad and Seifer:</span> <span class="t2">Themselves</span><br />
+		  <span class="t1">Aerie's Father and Sir William of Thrope:</span> <span class="t2">Tris</span><br />
+		  <span class="t1">Aerie's Real Father and Rumar:</span> <span class="t2">Shed</span><br />
+          <span class="t1">Production Design:</span> <span class="t2">BLUE_CHIP</span><br />
+		  <span class="t1">Directors of Photography:</span> <span class="t2">SConrad and jeziljin</span><br />
+		  <span class="t1">Sound Production:</span> <span class="t2">Tris</span><br />
+		  <span class="t1">Screenplay:</span> <span class="t2">Beyshaliban, Shed and Userunfriendly</span><br />
+		  <span class="t1">German Localisation</span> <span class="t2">Fey</span><br />
+		  <span class="t1">Russian Localisation</span> <span class="t2">Austin, Prowler aerie.ru.</span><br />
+		  <span class="t1">Italian Localisation</span> <span class="t2">al17</span> <br />
+		  <span class="t1">Produced by:</span> <span class="t2">SConrad</span><br />
+		  <span class="t1">Directed by:</span> <span class="t2">Shed</span><br />
+		  
+		  <p><strong>With special thanks to:</strong></p>
+		  <ul>
+		    <li>MorningGlory</li>
+			<li>Jerry Springer</li>
+		  </ul>
+
+		  <p><strong>Software used in creation:</strong></p>
+		  <ul>
+		    <li>WeiDU by Westley Weimer</li>
+			<li>Near Infinity by Jon Olav Hauglid</li>
+			<li>DLTCEP by Avenger</li>
+			<li>Infinity Explorer by Dmitry Jemerov</li>
+			<li>IETME by the TBG team</li>
+			<li>AVI to Interplay MVE converter by ABel</li>
+			<li>Vegas 5 by Sony Pictures Digital Inc.</li>
+			<li>ConTEXT by Eden Kirin - used with the highlighters made by Idobek and Gebhard Blucher</li>
+			<li>UltraEdit-32 by IDM - used with the highlighters made by Shed</li>
+			<li>IESDP maintained by igi</li>
+			<li>NSIS by Justin Frankel</li>
+			<li>Oggdec</li>
+		  
+		<p>This mod may be freely distributed, but it may not be sold, published, compiled or redistributed in any form without the consent of its authors.<br />
+		Copyright © Sebastian Conrad and Edward Plant 2010.<br />
+		The Jerry Zinger Show is not developed, supported, or endorsed by BioWare or Black Isle.<br />
+		The Jerry Zinger Show is not developed, supported, or endorsed by Jerry Springer or NBC Universal Television.<br /></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr /> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">The Jerry Zinger Show &gt; Credits</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+        <!-- ================== V e r s i o n   H i s t o r y ================== -->
+        <a name="version" id="version"></a>
+        <div class="content">
+          <h2>Version history</h2>
+		  <h6>February 2011 - Version 4:</h6>
+		  <ul>
+			<li>Added Italian Translation</li>
+		  </ul>
+          <h6>January 2010 - Version 3:</h6>
+		  <ul>
+		   <li>Added Russian Translation</li>
+		  </ul>
+		  
+		  <h6>March 2009 - Version 2:</h6>
+          <ul>
+            <li>Added German Translation</li>
+            <li>Updated Readme</li>
+            <li>Moved position of hawker</li>
+            <li>Some misspellings fixed</li>
+            <li>Fixed a bug with Viconia's dialogue in Episode 8</li>
+          </ul>
+
+          <h6>October 2005:</h6>
+          <ul>
+            <li>First Release</li>
+          </ul>
+          <address>
+            <span class="footer">The Jerry Zinger Show &gt; Version History</span> &#8226;<a href="#top">BACK TO TOP</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

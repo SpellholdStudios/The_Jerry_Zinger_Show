@@ -1,0 +1,11 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           CreateCreature("JZBubb",[1025.240],0)
+           ActionOverride("JZBubb",MoveToPoint([1065.470]))
+           Wait(4)
+           ActionOverride("JZBubb",StartDialogueNoSet(Player1))
+END

@@ -1,0 +1,7 @@
+IF
+	See(Protagonist)
+	AreaCheck("AR0700")
+THEN
+	RESPONSE #100
+		Dialogue("JZNeeber")
+END

@@ -1,0 +1,13 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           CreateCreature("JZElle",[1025.240],0)
+           ActionOverride("JZElle",DestroyItem("IMOENHP1"))
+           ActionOverride("JZElle",MoveToPoint([1100.450]))
+           Wait(2)
+           ActionOverride("JZElle",FaceObject("JZJon"))
+           ActionOverride("JZElle",StartDialogueNoSet("JZJon"))
+END

@@ -1,0 +1,12 @@
+IF
+     True()
+THEN
+     RESPONSE #100
+           CutSceneId(Player1)
+           Wait(2)
+           ActionOverride("Aerie",MakeUnselectable(0))
+           Wait(1)
+           ActionOverride("Aerie",MoveToPoint([1065.470]))
+           Wait(8)
+           ActionOverride("Aerie",StartDialogueNoSet(Player1))
+END
