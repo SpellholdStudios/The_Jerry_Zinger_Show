@@ -2,7 +2,7 @@
 ![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/The_Jerry_Zinger_Show?include_prereleases&color=darkred)<a name="top" id="top"> </a>
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/The_Jerry_Zinger_Show?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
-![Language](https://img.shields.io/static/v1?label=languages&message=English%20%7C%20French%20%7C%20Polish%20%7C%20Chinese%20%7C%20Russian&color=limegreen)
+![Language](https://img.shields.io/static/v1?label=languages&message=English%20%7C%20German%20%7C%20Italian%20%7C%20Russian&color=limegreen)
 
 ![Supported games](https://img.shields.io/static/v1?label=supported%20games&message=BGII:ToB%20%7C%20BGT%20%7C%20BG2%3AEE%20%7C%20EET&color=dodgerblue)
 
