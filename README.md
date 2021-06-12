@@ -2,7 +2,10 @@
 
 <div align="center"><h1></a>The Jerry Zinger Show</h1>
 
-**Authors:** <a href="http://www.shsforums.net/user/3014-shed/">Shed, <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad and others  
+</div><br>
+
+
+**Authors:** <a href="http://www.shsforums.net/user/3014-shed/">Shed</a>, <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad</a> and others  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/jz">Spellhold Studios</a>  
 **Mod Forum:** <a href="http://www.shsforums.net/forum/200-jerry-zinger-show">Jerry Zinger Show</a>
 
