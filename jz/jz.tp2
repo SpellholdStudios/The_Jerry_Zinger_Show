@@ -1,734 +1,97 @@
-// ------------------------------------------------------------------------------------------------------------------------
-//
-// Mod:                 The Jerry Zinger Show
-// File:                Setup-JZ.tp2
-// Responsible authors: SConrad, Shed
-// Version:             4
-//
-// ------------------------------------------------------------------------------------------------------------------------
+/* =========================================== *
+ *                                             *
+ * Mod:                 The Jerry Zinger Show  *
+ * File:                jz.tp2                 *
+ * Responsible authors: SConrad, Shed          *
+ * Version:             5.0                    *
+ *                                             *
+ * =========================================== */
 
-// ------------------------------------------------------------------------------------------------------------------------
-// Setup
-// ------------------------------------------------------------------------------------------------------------------------
-// Backup-directory
-BACKUP ~JZ/Backup~
+BACKUP ~jz/backup~
 
-// Author
+/* Author
 AUTHOR ~
 	SConrad (sconrad@spellholdstudios.net)
-	Shed 	(shed@spellholdstudios.net)~
+	Shed 	(shed@spellholdstudios.net)~*/
+SUPPORT ~http://www.shsforums.net/forum/200-jerry-zinger-show~
+
+VERSION ~v5.0~
+
+README ~jz/readme/jz-readme-english.html~
+
+ALWAYS
+
+	/* Converts tra files to UTF-8 */
+	// No exception, everything needs to be converted
+	ACTION_DEFINE_ARRAY jznoconvert BEGIN END
+
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY jzreload BEGIN zs END
+
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/translations~
+			noconvert_array = jznoconvert
+			reload_array = jzreload
+	END
+
+END
+
 
 // Languages
-LANGUAGE ~English (British)~ ~English~ ~JZ/Translations/English/JZ.tra~
-LANGUAGE ~Deutsch~	     ~Deutsch~ ~JZ/Translations/Deutsch/JZ.tra~
-LANGUAGE ~Russian (Translation by Austin & aerie.ru. Updated by Prowler)~		 ~Russian~ ~JZ/Translations/Russian/JZ.tra~
-LANGUAGE ~Italian~ ~Italian~ ~JZ/Translations/Italian/JZ.tra~
-
-// ------------------------------------------------------------------------------------------------------------------------
-// General
-// ------------------------------------------------------------------------------------------------------------------------
-// First component - JZ
-BEGIN @0 // ~The Jerry Zinger Show~
-REQUIRE_FILE ~Data/25Dialog.bif~ @25 //ToB
-
-// View the readme at exit
-AT_INTERACTIVE_EXIT ~VIEW JZ/README-JZ.html~
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Area
-// ------------------------------------------------------------------------------------------------------------------------
-// Copy ARJZ00 to the override-directory
-COPY ~JZ/Areas/ARJZ00.are~	~override~
-~JZ/Areas/ARJZ00.MOS~	~override~
-~JZ/Areas/ARJZ00.WED~	~override~
-~JZ/Areas/ARJZ00HT.BMP~	~override~
-~JZ/Areas/ARJZ00LM.BMP~	~override~
-~JZ/Areas/ARJZ00SR.BMP~	~override~
-~JZ/Areas/ARJZ00TMP.BMP~ ~override~
-~JZ/Areas/ARJZ00.TIZ~	~override~
-
-// Patch AR0700
-COPY_EXISTING ~AR0700.are~ ~override~
-  SAY 0x43fc @12
-
-// Patch AR0709 - May God help me
-COPY_EXISTING ~ar0709.are~ ~override~
-  // We start by reading offsets and numbers
-  READ_SHORT 0x5a "trig_num"
-  READ_LONG  0x5c "trig_off"
-  READ_LONG  0x60 "spawn_off"
-  READ_LONG  0x68 "ent_off"
-  READ_SHORT 0x6c "ent_num"
-  READ_LONG  0x70 "cont_off"
-  READ_LONG  0x78 "item_off"
-  READ_LONG  0x7c "vert_off"
-  READ_SHORT 0x80 "vert_num"
-  READ_LONG  0x84 "amb_off"
-  READ_LONG  0x88 "var_off"
-  READ_LONG  0xa0 "bmp_off"
-  READ_LONG  0xa8 "door_off"
-  READ_LONG  0xb0 "anim_off"
-  READ_LONG  0xb8 "tiled_off"
-  READ_LONG  0xbc "song_off"
-  READ_LONG  0xc0 "rest_off"
-  READ_LONG  0xc4 "note_off"
-  // Add 4 vertices
-  INSERT_BYTES  ("%vert_off%" + ("%vert_num%" * 0x4)      ) 0x10
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4)      ) 736
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x2) 683
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x4) 826
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x6) 617
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x8) 887
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xa) 674
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xc) 780
-    WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xe) 742
-  // Now, we add a new entrance. Yippie!
-  INSERT_BYTES  ("%ent_off%" + ("%ent_num%" * 0x68)       ) 0x68
-    WRITE_ASCII ("%ent_off%" + ("%ent_num%" * 0x68)       ) ~ExitJZ00~   // Name of the new entrance
-    WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x20) 739          // Location: X
-    WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x22) 630          // Location: Y
-    WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x24) 6            // Directional facing
-  // First, we insert the new trigger by adding 196 bytes at a specific location in the file, then we patch it :)
-  INSERT_BYTES  ("%trig_off%" + ("%trig_num%" * 0xc4)       ) 0xc4
-    WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4)       ) ~TranJZ00~   // Name of the new trigger
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x20) 0x02         // Which trigger type?
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x22) 736          // Bounding box
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x24) 617          // Bounding box
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x26) 887          // Bounding box
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x28) 742          // Bounding box
-    WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2a) 0x04         // Number of vertices
-    WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2c) "%vert_num%" // First vertex index
-    WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x34) 0x2a         // Cursor index
-    WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x38) ~ARJZ00~     // Destination area
-    WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x40) ~Exit0709~   // Exit point
-    WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x60) 0x04         // Flags
-    SAY         ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x64) #-1          // Trigger Text
-  // Code wrapup - need to adjust numbers of vertices and triggers and adjust offsets
-  WRITE_SHORT 0x80 ("%vert_num%" + 0x04) // Four new vertices
-  WRITE_SHORT 0x5a ("%trig_num%" + 0x01) // One new trigger
-  WRITE_SHORT 0x6c ("%ent_num%"  + 0x01) // One new entrance
-  // Remember that even if the offset-fields are listed in one certain order, the offsets aren't
-  SET "adj" = 0xc4
-  WRITE_LONG 0x60 ("%spawn_off%" + "%adj%")
-  WRITE_LONG 0x68 ("%ent_off%"   + "%adj%")
-  SET "adj" = (0xc4 + 0x68)
-  WRITE_LONG 0x70 ("%cont_off%"  + "%adj%")
-  WRITE_LONG 0x78 ("%item_off%"  + "%adj%")
-  WRITE_LONG 0x7c ("%vert_off%"  + "%adj%")
-  WRITE_LONG 0x84 ("%amb_off%"   + "%adj%")
-  WRITE_LONG 0x88 ("%var_off%"   + "%adj%")
-  WRITE_LONG 0xa8 ("%door_off%"  + "%adj%")
-  WRITE_LONG 0xb8 ("%tiled_off%" + "%adj%")
-  SET "adj" = (0xc4 + 0x68 + 0x10)
-  // WRITE_SHORT 0x80 ("%vert_num%"  + "%adj%")
-  WRITE_LONG 0xa0 ("%bmp_off%"   + "%adj%")
-  WRITE_LONG 0xb0 ("%anim_off%"  + "%adj%")
-  WRITE_LONG 0xbc ("%song_off%"  + "%adj%")
-  WRITE_LONG 0xc0 ("%rest_off%"  + "%adj%")
-  // WRITE_LONG  0xc4 ("%note_off%"  + "%adj%")
-BUT_ONLY_IF_IT_CHANGES
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Audio
-// ------------------------------------------------------------------------------------------------------------------------
-// Copy the sound directory to override
-COPY ~JZ/Audio~ ~override~
-
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Batch-files
-// ------------------------------------------------------------------------------------------------------------------------
-// Inline JZInstall.bat
-<<<<<<<< JZ/JZInstall.bat
-@echo off
-
-JZ\Executables\tisunpack.exe -s override\ARJZ00.tiz
-echo Area decompression for the Jerry Zinger Show completed.
-JZ\Executables\oggdec.exe override\JZ*.ogg
-del override\JZ*.ogg
-echo Sound decoding for the Jerry Zinger Show completed.
-
-mkdir JZ\Backup\Chitin-Key-Backup-Do-Not-Delete-For-The-Love-Of-God
-copy chitin.key JZ\Backup\Chitin-Key-Backup-Do-Not-Delete-For-The-Love-Of-God
-mkdir JZMovie
-copy JZ\Movies\*.mve JZMovie
-copy Setup-JZ.exe JZMovie.exe
-JZMovie --make-biff JZMovie
-del JZMovie.exe
-rmdir JZMovie /S /Q
-echo Installation of movies completed.
-
-del JZInstall.bat
->>>>>>>>
-
-// Inline JZUninstall.bat
-<<<<<<<< JZ/JZUninstall.bat
-@echo off
-
-del override\ARJZ00.tis
-echo Areas uninstalled.
-
-del override\JZ*.wav
-echo Audio uninstalled.
-
-copy Setup-JZ.exe JZMovie.exe
-JZMovie --remove-biff data\JZMovie.bif
-del JZMovie.exe
-del data\JZMovie.bif /F /Q
-echo Movies uninstalled.
-
-del JZ\Backup\JZUninstall.bat
->>>>>>>>
-
-// Copy JZInstall.bat to the game directory (this doesn't really matter where it is, it's going to be 'invisible' anyway)
-COPY ~JZ/JZInstall.bat~ ~JZInstall.bat~
-
-// Copy JZUninstall.bat to the backup-folder, using the no backup option, to prevent the file from being deleted at uninstall - the .bat will delete itself anyway
-COPY + ~JZ/JZUninstall.bat~ ~JZ/Backup/JZUninstall.bat~
-
-// Have WeiDU execute JZInstall.bat at install
-AT_INTERACTIVE_EXIT ~JZInstall.bat~
-
-// Have WeiDU execute JZUninstall.bat at uninstall
-AT_INTERACTIVE_UNINSTALL ~JZ/Backup/JZUninstall.bat~
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Creatures
-// ------------------------------------------------------------------------------------------------------------------------
-// Jerry himself
-COPY ~JZ/Creatures/jzjerry.cre~ ~override~
-  SAY NAME1 @1
-  SAY NAME2 @1
-
-// Steve the ogre
-COPY ~JZ/Creatures/jzogre.cre~ ~override/JZSteve.cre~
-  SAY NAME1 @2
-  SAY NAME2 @2
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZSteve~
-  WRITE_ASCII DEATHVAR        ~JZSteve~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZSteve~
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_ASCII SCRIPT_RACE     ~None~
-
-// Bob the ogre
-COPY ~JZ/Creatures/jzogre.cre~ ~override/JZBob.cre~
-  SAY NAME1 @3
-  SAY NAME2 @3
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZBob~
-  WRITE_ASCII DEATHVAR        ~JZBob~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZBob~
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_ASCII SCRIPT_RACE     ~None~
-
-// Ogre1
-COPY ~JZ/Creatures/jzogre.cre~ ~override/JZOgre1.cre~
-  SAY NAME1 @6
-  SAY NAME2 @6
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZOgre1~
-  WRITE_ASCII DEATHVAR        ~JZOgre1~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZOgre1~
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_ASCII SCRIPT_RACE     ~None~
-  
-// Ogre2
-COPY ~JZ/Creatures/jzogre.cre~ ~override/JZOgre2.cre~
-  SAY NAME1 @6
-  SAY NAME2 @6
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZOgre2~
-  WRITE_ASCII DEATHVAR        ~JZOgre2~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZOgre2~
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_ASCII SCRIPT_RACE     ~None~
-
-// Receptionist
-COPY ~JZ/Creatures/jzcrwdf1.cre~ ~override/JZCount.cre~
-  SAY NAME1 @4
-  SAY NAME2 @4
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZCount~
-  WRITE_ASCII DEATHVAR        ~JZCount~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZCount~
-  ADD_CRE_ITEM ~MINHP1~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~VAMPREG~ #0 #0 #0 ~IDENTIFIED~ ~RRING~
-  
-// Sebastian the gnome
-COPY ~JZ/Creatures/jzseb.cre~ ~override/JZSeb.cre~
-  SAY NAME1 @8
-  SAY NAME2 @8
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZSeb~
-  WRITE_ASCII DEATHVAR        ~JZSeb~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZSeb~
-  ADD_CRE_ITEM ~BLUN04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
-
-// Steve the gnome
-COPY ~JZ/Creatures/jzseif.cre~ ~override/JZSeif.cre~
-  SAY NAME1 @7
-  SAY NAME2 @7
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DIALOG          ~JZSeif~
-  WRITE_ASCII DEATHVAR        ~JZSeif~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZSeif~
-
-// Jon Irenicus
-COPY_EXISTING ~jon1.cre~ ~override/JZJon.cre~
-  WRITE_ASCII DIALOG          ~JZJon~
-  WRITE_ASCII DEATHVAR        ~JZJon~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZJon~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-
-// Ellesime
-COPY_EXISTING ~suelle.cre~ ~override/JZElle.cre~
-  WRITE_ASCII DIALOG          ~JZElle~
-  WRITE_ASCII DEATHVAR        ~JZElle~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZElle~
-  // Removing imoen1hp.itm
-  READ_LONG 0x2b8 "slot_off"
-  READ_LONG 0x2bc "item_off"
-  READ_LONG 0x2c0 "item_num"
-  FOR ( item = "%item_off%" ; item <= ("%item_off%" + ("%item_num%" * 0x14)) ; item = item + 0x14 ) BEGIN
-    READ_ASCII "%item%" "name"
-    PATCH_IF (("%name%" STRING_COMPARE_CASE "imoenhp1" = 0) AND (item = "%item_off%")) BEGIN
-      SET "belt" = 0
-      FOR ( slot = "%slot_off%" ; slot < ("%slot_off%" + 0x4e) ; slot = slot + 0x2 ) BEGIN
-        READ_BYTE "%slot%" "number"
-        PATCH_IF ("%number%" = "%belt%") BEGIN
-          WRITE_BYTE "%slot%" 0xff
-          WRITE_BYTE ("%slot%" + 0x1) 0xff
-        END
-      END
-    END ELSE
-    PATCH_IF (("%name%" STRING_COMPARE_CASE "imoenhp1" = 0) AND (item > "%item_off%")) BEGIN
-      SET "belt" = (("%item%" - "%item_off%") / 0x14)
-      FOR ( slot = "%slot_off%" ; slot < ("%slot_off%" + 0x4e) ; slot = slot + 0x2 ) BEGIN
-        READ_BYTE "%slot%" "number"
-        PATCH_IF ("%number%" = "%belt%") BEGIN
-          WRITE_BYTE "%slot%" 0xff
-          WRITE_BYTE ("%slot%" + 0x1) 0xff
-        END
-      END
-    END
-  END
-BUT_ONLY_IF_IT_CHANGES
-
-// Rumar
-COPY_EXISTING ~rumar.cre~ ~override/JZRumar.cre~
-  WRITE_ASCII DIALOG          ~JZRumar~
-  WRITE_ASCII DEATHVAR        ~JZRumar~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZRumar~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  WRITE_LONG 0x2e  12
-
-// Priss
-COPY_EXISTING ~priss.cre~ ~override/JZPriss.cre~
-  WRITE_ASCII DIALOG          ~JZPriss~
-  WRITE_ASCII DEATHVAR        ~JZPriss~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZPriss~
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  
-// Tiana
-COPY_EXISTING ~tiana.cre~ ~override/JZTiana.cre~
-  WRITE_ASCII DIALOG          ~JZTiana~
-  WRITE_ASCII DEATHVAR        ~JZTiana~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZTiana~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-// Sir William of Thorpe
-COPY_EXISTING ~willia.cre~ ~override/JZWilly.cre~
-  WRITE_ASCII DIALOG          ~JZWilly~
-  WRITE_ASCII DEATHVAR        ~JZWilly~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZWilly~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x2e  13
-
-// Bubbles
-COPY_EXISTING ~bubbles.cre~ ~override/JZBubb.cre~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZBubb~
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_ASCII DEATHVAR        ~JZBubb~
-  WRITE_LONG 0x2cc 0
-  WRITE_LONG 0x2d0 0
-  WRITE_ASCII DIALOG          ~JZBubb~
-
-// Barkeep
-COPY ~JZ/Creatures/JZkeep.cre~	~override/jzkeep.cre~
-  SAY NAME1 @11
-  SAY NAME2 @12
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZKeep~
-  ADD_CRE_ITEM ~MINHP1~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~VAMPREG~ #0 #0 #0 ~IDENTIFIED~ ~RRING~
-
-// Aerie's Mother
-COPY ~JZ/Creatures/JZAeMo.cre~	~override/JZAeMo.cre~
- SAY NAME1 @13
- SAY NAME2 @13
- 
-// Aerie's Father
-COPY ~JZ/Creatures/JZDAD1.cre~ ~override/JZdad1.cre~
- SAY NAME1 @14
- SAY NAME2 @14
- WRITE_ASCII DIALOG		~JZdad1~
- 
-// Aerie's Real Father
-COPY ~JZ/Creatures/JZDAD2.cre~ ~override/JZdad2.cre~
- SAY NAME1 @15
- SAY NAME2 @15
-
-// Newb
-COPY_EXISTING ~neeber.cre~	~override/JZNewb.cre~
-  SAY NAME1 @18
-  SAY NAME2 @18
-  WRITE_ASCII DIALOG          ~JZNewb~
-  WRITE_ASCII DEATHVAR        ~JZNewb~
-  WRITE_LONG 0x248 0
-  WRITE_LONG 0x24c 0
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZNewb~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  
-// Neeber
-COPY_EXISTING ~neeber.cre~	~override/JZNeeber.cre~
-  WRITE_ASCII DIALOG          ~JZNeeber~
-  WRITE_ASCII DEATHVAR        ~JZNeeber~
-  WRITE_LONG 0x248 0
-  WRITE_LONG 0x24c 0
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZNeeber~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  
-// Sir Ryan Trawl
-COPY_EXISTING ~kayl1.cre~	~override/JZTrawl.cre~
-  WRITE_ASCII DIALOG          ~JZTrawl~
-  WRITE_ASCII DEATHVAR        ~JZTrawl~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZTrawl~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-// Maria
-COPY_EXISTING ~maria.cre~	~override/JZMaria.cre~
-  WRITE_ASCII DIALOG          ~JZMaria~
-  WRITE_ASCII DEATHVAR        ~JZMaria~
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZMaria~
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-// Kid
-COPY_EXISTING ~pirkid01.cre~	~override/JZkid.cre~
-  SAY NAME1 @16
-  SAY NAME2 @16
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZKid~
-  WRITE_LONG 0x250 0
-  WRITE_LONG 0x254 0
-  WRITE_LONG 0x258 0
-  WRITE_LONG 0x25c 0
-  WRITE_LONG 0x268 0
-  WRITE_LONG 0x26c 0
-  WRITE_LONG 0x280 0
-  WRITE_LONG 0x284 0
-  WRITE_LONG 0x2cc 0
-  WRITE_LONG 0x2d0 0
-  WRITE_ASCII DIALOG	      ~JZKid~
-  WRITE_ASCII DEATHVAR	      ~JZKid~
-  
-// Hawker
-COPY_EXISTING ~hawker01.cre~	~override/JZhawker.cre~
-  WRITE_ASCII DIALOG ~JZHawker~
-  WRITE_ASCII DEATHVAR ~JZHawker~
-  WRITE_ASCII SCRIPT_CLASS ~JZHawker~
-
-// Audience
-COPY ~JZ/Creatures/JZcrwdf1.cre~		~override/jzcrwdf1.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-
-COPY ~JZ/Creatures/JZcrwdf2.cre~		~override/jzcrwdf2.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-
-COPY ~JZ/Creatures/JZcrwdf3.cre~		~override/jzcrwdf3.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-COPY ~JZ/Creatures/JZcrwdf4.cre~		~override/jzcrwdf4.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-
-COPY ~JZ/Creatures/JZcrwdm1.cre~		~override/jzcrwdm1.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-
-COPY ~JZ/Creatures/JZcrwdm2.cre~		~override/jzcrwdm2.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-COPY ~JZ/Creatures/JZcrwdm3.cre~		~override/jzcrwdm3.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_LONG 0x260 0
-  WRITE_LONG 0x264 0
-  
-COPY ~JZ/Creatures/JZdrunk1.cre~		~override/jzdrunk1.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZDrunk~
-  ADD_CRE_ITEM ~MINHP1~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  //ADD_CRE_ITEM ~VAMPREG~ #0 #0 #0 ~IDENTIFIED~ ~RRING~
-
-COPY ~JZ/Creatures/JZdrunk2.cre~		~override/jzdrunk2.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZDrunk~
-  ADD_CRE_ITEM ~MINHP1~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~VAMPREG~ #0 #0 #0 ~IDENTIFIED~ ~RRING~
-  
-COPY ~JZ/Creatures/JZdrunk3.cre~		~override/jzdrunk3.cre~
-  SAY NAME1 @17
-  SAY NAME2 @17
-  WRITE_ASCII SCRIPT_OVERRIDE ~JZDrunk~
-  ADD_CRE_ITEM ~MINHP1~ #0 #0 #0 ~IDENTIFIED~ ~LRING~
-  ADD_CRE_ITEM ~VAMPREG~ #0 #0 #0 ~IDENTIFIED~ ~RRING~
-  
-// ------------------------------------------------------------------------------------------------------------------------
-// Dialogue
-// ------------------------------------------------------------------------------------------------------------------------
-// The basic dialogue
-COMPILE ~JZ/Dialogue/JZBasic.d~
-
-// The crowd dialogue
-COMPILE ~JZ/Dialogue/JZCrwd.d~
-
-// The drunk dialogue
-COMPILE ~JZ/Dialogue/JZDrunk.d~
-
-// The barkeep dialogue
-COMPILE ~JZ/Dialogue/JZKeep.d~
-
-// The hawker dialogue
-COMPILE ~JZ/Dialogue/JZHawker.d~
-
-// EP1 - "My ex is an evil mastermind" (Irenicus, Ellesime)
-COMPILE ~JZ/Dialogue/JZEP01.d~
-
-// EP2 - "Racial tension" - (Korgan)
-COMPILE ~JZ/Dialogue/JZEP02.d~
-
-// EP3 - "Leaving with my lover" (Rumar)
-COMPILE ~JZ/Dialogue/JZEP03.d~
-
-// EP4 - "Families Reunited" (Aerie)
-COMPILE ~JZ/Dialogue/JZEP04.d~
-
-// EP5 - (No name)
-COMPILE ~JZ/Dialogue/JZEP05.d~
-
-// EP6 - "Knights who wear Lingerie and the women who love them" (Keldorn)
-COMPILE ~JZ/Dialogue/JZEP06.d~
-
-// EP7 - "Latex Gnomes" (SConrad, Seifer)
-COMPILE ~JZ/Dialogue/JZEP07.d~
-
-// EP8 - "My husband's mistress" (Viconia, Keldorn)
-COMPILE ~JZ/Dialogue/JZEP08.d~
-
-// EP9 - "Who's your daddy?" (Aerie)
-COMPILE ~JZ/Dialogue/JZEP09.d~
-
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Items
-// ------------------------------------------------------------------------------------------------------------------------
-// Club of 100% unconsciousness
-COPY ~JZ/Items/jzblun.itm~ ~override~
-  SAY NAME1 @5
-  SAY NAME2 @5
-  
-  
-// ------------------------------------------------------------------------------------------------------------------------
-// Stores
-// ------------------------------------------------------------------------------------------------------------------------
-// JZStore
-COPY ~JZ/Stores/JZStore.sto~ ~override~
-  SAY 0xc ~Barkeeper~
-  SAY 0xa4 ~Cola~
-  SAY 0xb8 ~Coffee~
-  SAY 0xcc ~Cheap Beer~
-  SAY 0xe0 ~House White~
-  SAY 0xf4 ~Gin & Tonic~
-  SAY 0x108 ~XXXX Spirits~
-  SAY 0x11c ~Definitely Not Tea~
-
-// Rumours
-COMPILE ~JZ/Dialogue/JZRumour.d~
-
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Scripts
-// ------------------------------------------------------------------------------------------------------------------------
-// Area Script
-COMPILE ~JZ/Scripts/ARJZ00.baf~
-
-// Hawker spawn in AR0700
-EXTEND_BOTTOM ~AR0700.bcs~ ~JZ/Scripts/JZHawkerspawn.baf~
-
-// Crowd Script
-COMPILE ~JZ/Scripts/JZCrwd.baf~
-
-// Drunk Script
-COMPILE ~JZ/Scripts/JZDrunk.baf~
-
-// Barkeeper Script
-COMPILE ~JZ/Scripts/JZKeep.baf~
-
-// Receptionist Script
-COMPILE ~JZ/Scripts/JZCount.baf~
-
-// Hawker Script
-COPY_EXISTING ~hawker01.bcs~ ~override/JZHawker.bcs~
-REPLACE 60853 @23
-REPLACE 60854 @24
-
-// EP1 - "My ex is an evil mastermind" (Irenicus, Ellesime)
-COMPILE ~JZ/Scripts/JZEP101.baf~
-        ~JZ/Scripts/JZEP102.baf~
-        ~JZ/Scripts/JZEP103.baf~
-        ~JZ/Scripts/JZEP104.baf~
-        ~JZ/Scripts/JZEP105.baf~
-
-// EP2 - "Racial tension" - (Korgan)
-COMPILE ~JZ/Scripts/JZEP201.baf~
-        ~JZ/Scripts/JZEP202.baf~
-        ~JZ/Scripts/JZEP203.baf~
-        ~JZ/Scripts/JZEP204.baf~
-
-// EP3 - "Leaving with my lover" (Rumar)
-COMPILE ~JZ/Scripts/JZEP301.baf~
-        ~JZ/Scripts/JZEP302.baf~
-        ~JZ/Scripts/JZEP303.baf~
-        ~JZ/Scripts/JZEP304.baf~
-        ~JZ/Scripts/JZEP305.baf~
-        ~JZ/Scripts/JZEP306.baf~
-        ~JZ/Scripts/JZEP307.baf~
-        
-// EP4 - "Families Reunited" (Aerie)
-COMPILE ~JZ/Scripts/JZEP401.baf~
-        ~JZ/Scripts/JZEP402.baf~
-        ~JZ/Scripts/JZEP403.baf~
-        ~JZ/Scripts/JZEP404.baf~
-        ~JZ/Scripts/JZEP405.baf~
-        ~JZ/Scripts/JZEP406.baf~
-        
-// EP5 (No name)
-COMPILE ~JZ/Scripts/JZEP501.baf~
-        ~JZ/Scripts/JZEP502.baf~
-        ~JZ/Scripts/JZEP503.baf~
-        ~JZ/Scripts/JZEP504.baf~
-        ~JZ/Scripts/JZNewb.baf~
-EXTEND_TOP ~AR0700.bcs~	~JZ/Scripts/JZNeeberspawn.baf~
-
-// EP6 - "Knights who wear Lingerie and the women who love them" - (Keldorn)
-COMPILE ~JZ/Scripts/JZEP601.baf~
-        ~JZ/Scripts/JZEP602.baf~
-        ~JZ/Scripts/JZEP602a.baf~
-        ~JZ/Scripts/JZEP603.baf~
-        ~JZ/Scripts/JZEP604.baf~
-        ~JZ/Scripts/JZEP604a.baf~
-        ~JZ/Scripts/JZEP605.baf~
-
-// EP7 - "Latex Gnomes" (SConrad, Seifer)
-COMPILE ~JZ/Scripts/JZEP701.baf~
-        ~JZ/Scripts/JZEP702.baf~
-        ~JZ/Scripts/JZEP703.baf~
-        ~JZ/Scripts/JZEP704.baf~
-        ~JZ/Scripts/JZEP705.baf~
-
-// EP8 - "My husband's mistress" (Viconia, Keldorn)
-COMPILE ~JZ/Scripts/JZEP801.baf~
-        ~JZ/Scripts/JZEP802.baf~
-        ~JZ/Scripts/JZEP803.baf~
-        ~JZ/Scripts/JZEP804.baf~
-        ~JZ/Scripts/JZEP805.baf~
-        ~JZ/Scripts/JZEP806.baf~
-        ~JZ/Scripts/JZEP806a.baf~
-        ~JZ/Scripts/JZEP807.baf~
-        ~JZ/Scripts/JZEP808.baf~
-        ~JZ/Scripts/JZEP808a.baf~
-        
-// EP9 - "Who's your daddy?" (Aerie)
-COMPILE ~JZ/Scripts/JZEP901.baf~
-        ~JZ/Scripts/JZEP902.baf~
-        ~JZ/Scripts/JZEP903.baf~
-        ~JZ/Scripts/JZEP904.baf~
-
-
-
-// ------------------------------------------------------------------------------------------------------------------------
-// Delay Between Episodes
-// ------------------------------------------------------------------------------------------------------------------------
-// Second component - JZ
-BEGIN @19 // ~Remove Delay Between Episodes~
-REQUIRE_COMPONENT ~/Setup-JZ.tp2~ ~0~ ~You must have the Jerry Zinger Show installed.~
-
-COPY_EXISTING ~JZCount.dlg~ ~override~
-  DECOMPILE_DLG_TO_D
-    REPLACE_TEXTUALLY ~GlobalTimerExpired("JZShow","GLOBAL")~ ~~
-    REPLACE_TEXTUALLY ~!GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
-    REPLACE_TEXTUALLY ~GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
-  COMPILE_D_TO_DLG
-BUT_ONLY_IF_IT_CHANGES
-
-COPY_EXISTING ~JZCount.bcs~ ~override~
-   DECOMPILE_BCS_TO_BAF
-     REPLACE_TEXTUALLY ~GlobalTimerExpired("JZShow","GLOBAL")~ ~~
-     REPLACE_TEXTUALLY ~!GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
-     REPLACE_TEXTUALLY ~GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
-   COMPILE_BAF_TO_BCS
-BUT_ONLY_IF_IT_CHANGES
+LANGUAGE ~English~
+         ~english~
+         ~jz/translations/english/jz.tra~
+         
+LANGUAGE ~Deutsch (Uebersetzung von Fey)~
+         ~deutsch~
+         ~jz/translations/deutsch/jz.tra~
+
+LANGUAGE ~Russian (translation by Austin & aerie.ru. Updated by Prowler)~
+         ~russian~
+         ~jz/translations/russian/jz.tra~
+
+LANGUAGE ~Italiano (traduzione di al17)~
+         ~italian~
+         ~jz/translations/italian/jz.tra~
+
+
+/* ============================================= *
+ *    The Jerry Zinger Show  (main component)    *
+ * ============================================= */
+
+BEGIN @0                                          // ~The Jerry Zinger Show~
+LABEL ~jz_main_component~
+REQUIRE_PREDICATE GAME_IS ~bg2ee bgt tob eet~ @25 // ~Throne of Bhaal required~
+
+INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
+
+
+/* =============================== *
+ *  Remove Delay Between Episodes  *
+// =============================== */
+
+BEGIN @19                          // ~Remove Delay Between Episodes~
+LABEL ~jz_remove_delay_between_episodes~
+//REQUIRE_COMPONENT ~jz.tp2~ ~0~ @22 // ~You must have the Jerry Zinger Show installed.~
+//REQUIRE_PREDICATE (MOD_IS_INSTALLED ~jz.tp2~ 0) @22
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~jz.tp2~ (ID_OF_LABEL ~jz.tp2~ ~jz_main_component~) @22 // ~You must have the Jerry Zinger Show installed.~
+
+SILENT
+COPY_EXISTING ~jzcount.dlg~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~GlobalTimerExpired("JZShow","GLOBAL")~ ~~
+		REPLACE_TEXTUALLY ~!GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
+		REPLACE_TEXTUALLY ~GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
+	END
+BUT_ONLY
+
+COPY_EXISTING ~jzcount.bcs~ ~override~
+	DECOMPILE_AND_PATCH BEGIN
+		REPLACE_TEXTUALLY ~GlobalTimerExpired("JZShow","GLOBAL")~ ~~
+		REPLACE_TEXTUALLY ~!GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
+		REPLACE_TEXTUALLY ~GlobalTimerNotExpired("JZShow","GLOBAL")~ ~~
+	END
+BUT_ONLY
