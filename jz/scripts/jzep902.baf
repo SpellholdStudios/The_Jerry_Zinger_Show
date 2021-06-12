@@ -2,10 +2,10 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		   CutSceneId(Player1)
-	           Wait(2)
-	           CreateCreature("JZDAD2",[1025.240],0)
-	           ActionOverride("JZDAD2",MoveToPoint([1065.470]))
-	           Wait(4)
-	           ActionOverride("JZDAD2",StartDialogueNoSet("JZAeMo"))
+		CutSceneId(Player1)
+		Wait(2)
+		CreateCreature("JZDAD2",[1025.240],0)
+		ActionOverride("JZDAD2",MoveToPoint([1065.470]))
+		Wait(4)
+		ActionOverride("JZDAD2",StartDialogueNoSet("JZAeMo"))
 END

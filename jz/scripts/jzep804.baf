@@ -2,12 +2,12 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		 CutSceneId(Player1)
-	         Wait(2)
-	         CreateCreature("JZMaria",[1025.240],0)
-	         ActionOverride("JZMaria",MoveToPoint([1100.450]))
-	         Wait(4)
-	         SetGlobal("JZClap","GLOBAL",0)
-	         SetGlobal("JZCat","GLOBAL",0)
-	         ActionOverride("JZMaria",StartDialogueNoSet(Player1))
+		CutSceneId(Player1)
+		Wait(2)
+		CreateCreature("JZMaria",[1025.240],0)
+		ActionOverride("JZMaria",MoveToPoint([1100.450]))
+		Wait(4)
+		SetGlobal("JZClap","GLOBAL",0)
+		SetGlobal("JZCat","GLOBAL",0)
+		ActionOverride("JZMaria",StartDialogueNoSet(Player1))
 END

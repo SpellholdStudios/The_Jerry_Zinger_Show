@@ -47,13 +47,30 @@
 
 ## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
-**Authors:** <a href="http://www.shsforums.net/user/3014-shed/">Shed, <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad and others  
+**Authors:** <a href="http://www.shsforums.net/user/3014-shed/">Shed</a>, <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad</a> and others  
 
 
 <hr>
 
 
 ## <a name="versions" id="versions"></a>Version History
+
+##### Version 5 &nbsp;(June 12, 2021)
+- Added *yoshimo.ini* metadata file to support AL|EN's "Project Infinity".
+- Renamed *Setup-JZ.tp2* -> *jz.tp2* to support AL|EN's "Project Infinity".
+- Replaced `AUTHOR` keyword with `SUPPORT`.
+- Added `VERSION` keyword.
+- Replaced `REQUIRE_FILE` with `REQUIRE_PREDICATE` condition to avoid installing the mod in inaccurate games.
+- Added component `DESIGNATED` number and "*yoshimo_friendship*" `LABEL`.
+- `README` command now accepts translated files.
+- Fixed barkeeper name incorrectly displayed when hovering over it bug.
+- Updated deprecated modding tools links.
+- Updated Russian translation.
+- Updated and renamed readme files to *yoshimofriendship-readme-%LANGUAGE%.html*.
+- Lower cased files.
+- Included Linux and macOS versions in the same package (thanks AL|EN!).
+- Updated WeiDU installer to v247.
+- Transfered mod to Spellhold Studios GitHub account.
 
 ##### Version 4 &nbsp;(February 14, 2011)
 - Added Italian translation.

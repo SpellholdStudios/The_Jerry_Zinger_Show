@@ -2,10 +2,10 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		 CutSceneId("Viconia")
-		         MakeUnselectable(0)
-		         Wait(1)
-		         MoveToPoint([1065.470])
-		         Wait(6)
-		         StartDialogueNoSet(Player1)
+		CutSceneId("Viconia")
+		MakeUnselectable(0)
+		Wait(1)
+		MoveToPoint([1065.470])
+		Wait(6)
+		StartDialogueNoSet(Player1)
 END

@@ -2,10 +2,10 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		 CutSceneId(Player1)
-		 Wait(1)
-		 CreateCreature("VICONI11",[1025.240],0)
-		 ActionOverride("Viconia",MoveToPoint([1065.470]))
-		 Wait(4)
-		 ActionOverride("Viconia",StartDialogueNoSet(Player1))
+		CutSceneId(Player1)
+		Wait(1)
+		CreateCreature("VICONI11",[1025.240],0)
+		ActionOverride("Viconia",MoveToPoint([1065.470]))
+		Wait(4)
+		ActionOverride("Viconia",StartDialogueNoSet(Player1))
 END

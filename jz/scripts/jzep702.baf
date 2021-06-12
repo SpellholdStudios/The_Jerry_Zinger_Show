@@ -1,16 +1,16 @@
 IF
-     True()
+	True()
 THEN
-     RESPONSE #100
-           CutSceneId(Player1)
-           Wait(2)
-           CreateCreature("JZSeb",[1025.240],0)
-           ActionOverride("JZSeb",MoveToPoint([1030.370]))
-           Wait(1)
-           ActionOverride("JZSeb",Face(2))
-           CreateCreature("JZSeif",[1025.240],0)
-           ActionOverride("JZSeif",MoveToPoint([1100.450]))
-           Wait(2)
-           ActionOverride("JZSeif",Face(3))
-           ActionOverride("JZSeb",StartDialogueNoSet(Player1))
+	RESPONSE #100
+		CutSceneId(Player1)
+		Wait(2)
+		CreateCreature("JZSeb",[1025.240],0)
+		ActionOverride("JZSeb",MoveToPoint([1030.370]))
+		Wait(1)
+		ActionOverride("JZSeb",Face(2))
+		CreateCreature("JZSeif",[1025.240],0)
+		ActionOverride("JZSeif",MoveToPoint([1100.450]))
+		Wait(2)
+		ActionOverride("JZSeif",Face(3))
+		ActionOverride("JZSeb",StartDialogueNoSet(Player1))
 END

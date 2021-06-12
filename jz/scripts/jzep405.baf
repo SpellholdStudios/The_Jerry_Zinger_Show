@@ -1,13 +1,13 @@
 IF
-     True()
+	True()
 THEN
-     RESPONSE #100
-           CutSceneId(Player1)
-           Wait(2)
-           CreateCreature("JZDAD1",[1025.240],0)
-           ActionOverride("JZDAD1",MoveToObject("Aerie"))
-           Wait(4)
-           ActionOverride("Aerie",FaceObject("JZDAD1"))
-           Wait(1)
-           ActionOverride("JZDAD1",StartDialogueNoSet(Player1))
+	RESPONSE #100
+		CutSceneId(Player1)
+		Wait(2)
+		CreateCreature("JZDAD1",[1025.240],0)
+		ActionOverride("JZDAD1",MoveToObject("Aerie"))
+		Wait(4)
+		ActionOverride("Aerie",FaceObject("JZDAD1"))
+		Wait(1)
+		ActionOverride("JZDAD1",StartDialogueNoSet(Player1))
 END

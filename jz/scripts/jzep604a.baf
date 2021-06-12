@@ -7,7 +7,7 @@ THEN
 		ActionOverride("Anomen",POLYMORPH(FIGHTER_MALE_HUMAN))
 		ActionOverride("Anomen",MoveToPoint([458.903]))
 		ActionOverride("JZBob",MoveToPoint([1127.257]))
-          	ActionOverride("JZSteve",MoveToPoint([1300.375]))
+		ActionOverride("JZSteve",MoveToPoint([1300.375]))
 		Wait(6)
 		ActionOverride("Anomen",DestroySelf())
 		ActionOverride("JZBob",Face(3))

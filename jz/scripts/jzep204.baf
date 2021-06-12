@@ -1,13 +1,13 @@
 IF
-    True()
+	True()
 THEN
-    RESPONSE #100
-    	   	CutSceneID(Player1)
-    	   	StartCutSceneMode()
-    	   	FadeToColor([20.0],0)
-    	   	Wait(4)
-    	   	SetGlobal("JZPanic","GLOBAL",0)
-    	   	// 5 * F1
+	RESPONSE #100
+		CutSceneId(Player1)
+		StartCutSceneMode()
+		FadeToColor([20.0],0)
+		Wait(4)
+		SetGlobal("JZPanic","GLOBAL",0)
+		// 5 * F1
 		CreateCreature("JZCRWDF1",[956.695],9)
 		CreateCreature("JZCRWDF1",[553.665],12)
 		CreateCreature("JZCRWDF1",[857.595],11)
@@ -44,14 +44,14 @@ THEN
 		ActionOverride("JZBob",DestroySelf())
 		ActionOverride("JZSteve",DestroySelf())
 		ActionOverride("JZOgre1",DestroySelf())
-           	ActionOverride("JZOgre2",DestroySelf())
+		ActionOverride("JZOgre2",DestroySelf())
 		Wait(4)
 		FadeFromColor([20.0],0)
 		ActionOverride(Player1,MakeUnselectable(0))
-           	ActionOverride(Player2,MakeUnselectable(0))
-           	ActionOverride(Player3,MakeUnselectable(0))
-	        ActionOverride(Player4,MakeUnselectable(0))
-	        ActionOverride(Player5,MakeUnselectable(0))
-	        ActionOverride(Player6,MakeUnselectable(0))
+		ActionOverride(Player2,MakeUnselectable(0))
+		ActionOverride(Player3,MakeUnselectable(0))
+		ActionOverride(Player4,MakeUnselectable(0))
+		ActionOverride(Player5,MakeUnselectable(0))
+		ActionOverride(Player6,MakeUnselectable(0))
 		EndCutSceneMode()
 END

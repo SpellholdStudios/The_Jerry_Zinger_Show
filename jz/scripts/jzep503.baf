@@ -2,7 +2,7 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		CutSceneID("JZJerry")
+		CutSceneId("JZJerry")
 		PlaySound("JZBoo")
 		ActionOverride("JZNewb",DisplayStringHead(Myself,@3400))
 		ActionOverride("JZNewb",EscapeArea()

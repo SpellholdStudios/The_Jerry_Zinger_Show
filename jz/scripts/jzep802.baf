@@ -2,12 +2,12 @@ IF
 	True()
 THEN
 	RESPONSE #100
-		CutSceneID(Player1)
+		CutSceneId(Player1)
 		Wait(2)
-	        ActionOverride("Keldorn",MakeUnselectable(0))
-	        Wait(1)
-	        ActionOverride("Keldorn",MoveToPoint([1030.370]))
-	        Wait(8)
-	        ActionOverride("Keldorn",Face(3))
-	        ActionOverride("Keldorn",StartDialogueNoSet(Player1)
+		ActionOverride("Keldorn",MakeUnselectable(0))
+		Wait(1)
+		ActionOverride("Keldorn",MoveToPoint([1030.370]))
+		Wait(8)
+		ActionOverride("Keldorn",Face(3))
+		ActionOverride("Keldorn",StartDialogueNoSet(Player1)
 END
