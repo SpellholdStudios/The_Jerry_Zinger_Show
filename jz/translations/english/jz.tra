@@ -21,7 +21,7 @@
 @17  = ~Audience~
 @18  = ~Newb~
 @19  = ~Remove Delay Between Episodes~
-@22  = ~You must have Jerry Zinger installed.~
+@22  = ~You must have the Jerry Zinger Show installed.~
 @23  = ~Step up to the Jerry Zinger show!~
 @24  = ~Come one, come all! The Jerry Zinger show, right this way.~
 @25  = ~Throne of Bhaal required.~
@@ -118,7 +118,7 @@ Aerie was reunited with her parents by Jerry Zinger! Incredible, after all those
 @502  = ~Well, we got almost half a bushel of turnips, but as usual almost all the tomatoes got splattered. I saved this one just for you cousin, 'cause I know how much you love them.~
 @503  = ~Thanks! I appreciate it, since it's my turn tomorrow to play target.~
 @504  = ~Yep, this gotta be the best scam you've ever come up with, cus! All we gotta do is act like morons and people throw food at us.~
-@505  = ~True. It's a classic example of the dialectic struggle of the agrarian subsistance worker and the industrialized town dweller. Their lives are so pitiful and insignificant that they automatically project hostility on any social strata that they perceive as inferior to them. All we have to do is cater to their poorly concieved notions of social superiority, and we automatically become embodiments of all that they despise within themselves - prejudice, greed, stupidity and lust - and then they throw veggies at us!~
+@505  = ~True. It's a classic example of the dialectic struggle of the agrarian subsistance worker and the industrialized town dweller. Their lives are so pitiful and insignificant that they automatically project hostility on any social strata that they perceive as inferior to them. All we have to do is cater to their poorly conceived notions of social superiority, and we automatically become embodiments of all that they despise within themselves - prejudice, greed, stupidity and lust - and then they throw veggies at us!~
 @506  = ~All we really need is a shield amulet, so the veggies don't hurt so much, and its all free gold!~
 @507  = ~Yeah... I wonder how much we can get for today's haul of turnips in the gnome ghetto? Is yesterday's haul ready for sale?~
 @508  = ~It's been in the tub overnight, so it's probably picked up a dozen extra pounds of water to its weight. Time to sell it off!~
@@ -282,8 +282,8 @@ It's getting harder and harder to keep Keldorn and Viconia from killing each oth
 @923  = ~Aw, that's so cute!~
 @924  = ~When you ask AERIE of her past, she cannot help but be confused by her conflicting memories and recent revelations. She had always thought of herself as an Avariel, but in truth she is half human, conceived during a fling with a human when she was younger. The "memories" of the slavers cutting off her wings were brought on by a fever while being taken through the Great Western Marsh, and the scars on her back were actually caused a hasty and violent attempt to remove her mechanical wings. Magical flying gear like that was worth a lot, and the slavers, in their haste to sell this very valuable mechanical device, cut her pretty badly.
 
-This latest revelation to her true past has affected Aerie pretty deeply. It has been hard for Aerie to come to grips with the truth as opposed to what her fevered mind manufactured in its delerium. Much like how a deeply wounded animal will scratch away at a hurt, despite knowing better, Aerie previously clung to the brutal memory as justification that she had been treated badly in her life. Now, knowing the prosaic truth, Aerie can finally grow as a true person, closing the past behind her and looking towards the future.~
-@925  = ~If there's one thing we have learnt today, it's that honesty is very important in relationships. Mabye Aerie's parents could have been more honest to her in the past. Perhaps a public exposure of sensitive private matters is healthy. I'll leave you to think about that. Bye for now!~ [JZ905]
+This latest revelation to her true past has affected Aerie pretty deeply. It has been hard for Aerie to come to grips with the truth as opposed to what her fevered mind manufactured in its delirium. Much like how a deeply wounded animal will scratch away at a hurt, despite knowing better, Aerie previously clung to the brutal memory as justification that she had been treated badly in her life. Now, knowing the prosaic truth, Aerie can finally grow as a true person, closing the past behind her and looking towards the future.~
+@925  = ~If there's one thing we have learnt today, it's that honesty is very important in relationships. Maybe Aerie's parents could have been more honest to her in the past. Perhaps a public exposure of sensitive private matters is healthy. I'll leave you to think about that. Bye for now!~ [JZ905]
 @926  = ~Who's your daddy?
 Turns out Aerie's not an Avariel after all, but a half elf. To think after all this whining from her, she hadn't even been abused as a child, or had her wings fall off!~
 
