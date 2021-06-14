@@ -13,7 +13,7 @@ BACKUP ~jz/backup~
 AUTHOR ~
 	SConrad (sconrad@spellholdstudios.net)
 	Shed 	(shed@spellholdstudios.net)~*/
-SUPPORT ~http://www.shsforums.net/forum/200-jerry-zinger-show~
+SUPPORT ~SHS Staff at http://www.shsforums.net/forum/200-jerry-zinger-show~
 
 VERSION ~v5.0~
 
@@ -21,12 +21,13 @@ README ~jz/readme/jz-readme-english.html~
 
 ALWAYS
 
-	/* Converts tra files to UTF-8 */
-	// No exception, everything needs to be converted
+	/* ---------------------------------------------------- *
+	 *    Convert strings to UTF-8 for BGEE/BG2EE           *
+	 *    No exception, everything needs to be converted    *
+	 * ---------------------------------------------------- */
 	ACTION_DEFINE_ARRAY jznoconvert BEGIN END
-
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
-	ACTION_DEFINE_ARRAY jzreload BEGIN zs END
+	ACTION_DEFINE_ARRAY jzreload BEGIN jz END
 
 	LAF HANDLE_CHARSETS
 		INT_VAR
@@ -63,7 +64,7 @@ LANGUAGE ~Italiano (traduzione di al17)~
  * ============================================= */
 
 BEGIN @0                                          // ~The Jerry Zinger Show~
-LABEL ~jz_main_component~
+LABEL ~jz_main~
 REQUIRE_PREDICATE GAME_IS ~bg2ee bgt tob eet~ @25 // ~Throne of Bhaal required~
 
 INCLUDE ~%MOD_FOLDER%/lib/main_component.tpa~
@@ -77,7 +78,7 @@ BEGIN @19                          // ~Remove Delay Between Episodes~
 LABEL ~jz_remove_delay_between_episodes~
 //REQUIRE_COMPONENT ~jz.tp2~ ~0~ @22 // ~You must have the Jerry Zinger Show installed.~
 //REQUIRE_PREDICATE (MOD_IS_INSTALLED ~jz.tp2~ 0) @22
-REQUIRE_PREDICATE MOD_IS_INSTALLED ~jz.tp2~ (ID_OF_LABEL ~jz.tp2~ ~jz_main_component~) @22 // ~You must have the Jerry Zinger Show installed.~
+REQUIRE_PREDICATE MOD_IS_INSTALLED ~jz.tp2~ (ID_OF_LABEL ~jz.tp2~ ~jz_main~) @22 // ~You must have the Jerry Zinger Show installed.~
 
 SILENT
 COPY_EXISTING ~jzcount.dlg~ ~override~

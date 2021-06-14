@@ -9,10 +9,13 @@
 
 <div align="center"><h1></a>The Jerry Zinger Show</h1>
 
+<h3>A Spellhold Studios mod for Baldur's Gate II: ToB (classical and EE games),<br>
+Baldur's Gate Trilogy and EET<h3>
+
 </div><br>
 
 
-**Authors:** <a href="http://www.shsforums.net/user/3014-shed/">Shed</a>, <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad</a> and others  
+**Authors:** <a href="http://www.shsforums.net/user/3014-shed">Shed</a>, <a href="http://www.shsforums.net/user/2832-sconrad">SConrad</a> and others  
 **Mod Website:** <a href="http://www.spellholdstudios.net/ie/jz">Spellhold Studios</a>  
 **Mod Forum:** <a href="http://www.shsforums.net/forum/200-jerry-zinger-show">Jerry Zinger Show</a>
 
@@ -214,7 +217,7 @@ A: The team is headed by Shed and SConrad. A full list listing everyone's contri
 
 ## <a name="credits" id="credits"></a>Credits and Acknowledgements
 
-**Authors:** <a href="http://www.shsforums.net/user/2832-sconrad/">SConrad</a>, <a href="http://www.shsforums.net/user/3014-shed/">Shed</a> and others  
+**Authors:** <a href="http://www.shsforums.net/user/2832-sconrad">SConrad</a>, <a href="http://www.shsforums.net/user/3014-shed">Shed</a> and others  
 
 ## 
 
@@ -233,7 +236,7 @@ A: The team is headed by Shed and SConrad. A full list listing everyone's contri
 
 ## <a name="versions" id="versions"></a>Version History
 
-##### Version 5 &nbsp;(June 12, 2021)
+##### Version 5.0 &nbsp;(June 12, 2021)
 - Added *jz.ini* metadata file to support AL|EN's "Project Infinity".
 - Added dynamic install order syntax and global `LABELS` to support AL|EN's "Project Infinity".
 - Renamed *Setup-JZ.tp2* -> *jz.tp2* to support AL|EN's "Project Infinity".
@@ -246,7 +249,7 @@ A: The team is headed by Shed and SConrad. A full list listing everyone's contri
     - Added WeiDU's built-in `HANDLE_CHARSETS` function to convert string entries for EE games.
     - Added `ADD_JOURNAL` function for EE games.
     - Rewrote install procedure to use WeiDU's built-in `HANDLE_AUDIO` function.
-    - Provided alternative TIS and PVRZ files for the EE games.
+    - Provided alternative TIS and PVRZ files EE games (used Tipun's function to find free PVRZ-files indexes on EE-games).
     - Provided wbm movie file for the EE games.
 - Replaced deprecated old-school `DECOMPILE_DLG_TO_D` plus `COMPILE_D_TO_DLG` and `DECOMPILE_BCS_TO_BAF` plus `COMPILE_BAF_TO_BCS` processes with more accurate `DECOMPILE_AND_PATCH` command.
 - Fixed barkeeper name incorrectly displayed when hovering over it bug.
@@ -259,7 +262,7 @@ A: The team is headed by Shed and SConrad. A full list listing everyone's contri
 - Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
-- Uploaded mod to official Spellhold Studios GitHub mirror account.
+- Uploaded mod to official <a href="https://github.com/SpellholdStudios">Spellhold Studios GitHub mirror account</a>.
 
 ## 
 

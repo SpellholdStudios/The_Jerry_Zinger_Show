@@ -56,36 +56,36 @@ COPY_EXISTING ~ar0709.are~ ~override~
 	READ_LONG  0xc0 "rest_off"
 	READ_LONG  0xc4 "note_off"
 	// Add 4 vertices
-	INSERT_BYTES  ("%vert_off%" + ("%vert_num%" * 0x4)      ) 0x10
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4)      ) 736
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x2) 683
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x4) 826
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x6) 617
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0x8) 887
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xa) 674
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xc) 780
-	WRITE_SHORT ("%vert_off%" + ("%vert_num%" * 0x4) + 0xe) 742
+	INSERT_BYTES ("%vert_off%" + ("%vert_num%" * 0x4)      ) 0x10
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4)      ) 736
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0x2) 683
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0x4) 826
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0x6) 617
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0x8) 887
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0xa) 674
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0xc) 780
+	WRITE_SHORT  ("%vert_off%" + ("%vert_num%" * 0x4) + 0xe) 742
 	// Now, we add a new entrance. Yippie!
-	INSERT_BYTES  ("%ent_off%" + ("%ent_num%" * 0x68)       ) 0x68
-	WRITE_ASCII ("%ent_off%" + ("%ent_num%" * 0x68)       ) ~ExitJZ00~   // Name of the new entrance
-	WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x20) 739          // Location: X
-	WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x22) 630          // Location: Y
-	WRITE_SHORT ("%ent_off%" + ("%ent_num%" * 0x68) + 0x24) 6            // Directional facing
+	INSERT_BYTES ("%ent_off%" + ("%ent_num%" * 0x68)       ) 0x68
+	WRITE_ASCII  ("%ent_off%" + ("%ent_num%" * 0x68)       ) ~ExitJZ00~     // Name of the new entrance
+	WRITE_SHORT  ("%ent_off%" + ("%ent_num%" * 0x68) + 0x20) 739            // Location: X
+	WRITE_SHORT  ("%ent_off%" + ("%ent_num%" * 0x68) + 0x22) 630            // Location: Y
+	WRITE_SHORT  ("%ent_off%" + ("%ent_num%" * 0x68) + 0x24) 6              // Directional facing
 	// First, we insert the new trigger by adding 196 bytes at a specific location in the file, then we patch it :)
-	INSERT_BYTES  ("%trig_off%" + ("%trig_num%" * 0xc4)       ) 0xc4
-	WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4)       ) ~TranJZ00~   // Name of the new trigger
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x20) 0x02         // Which trigger type?
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x22) 736          // Bounding box
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x24) 617          // Bounding box
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x26) 887          // Bounding box
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x28) 742          // Bounding box
-	WRITE_SHORT ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2a) 0x04         // Number of vertices
-	WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2c) "%vert_num%" // First vertex index
-	WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x34) 0x2a         // Cursor index
-	WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x38) ~ARJZ00~     // Destination area
-	WRITE_ASCII ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x40) ~Exit0709~   // Exit point
-	WRITE_LONG  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x60) 0x04         // Flags
-	SAY         ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x64) #-1          // Trigger Text
+	INSERT_BYTES ("%trig_off%" + ("%trig_num%" * 0xc4)       ) 0xc4
+	WRITE_ASCII  ("%trig_off%" + ("%trig_num%" * 0xc4)       ) ~TranJZ00~   // Name of the new trigger
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x20) 0x02         // Which trigger type?
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x22) 736          // Bounding box
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x24) 617          // Bounding box
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x26) 887          // Bounding box
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x28) 742          // Bounding box
+	WRITE_SHORT  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2a) 0x04         // Number of vertices
+	WRITE_LONG   ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x2c) "%vert_num%" // First vertex index
+	WRITE_LONG   ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x34) 0x2a         // Cursor index
+	WRITE_ASCII  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x38) ~ARJZ00~     // Destination area
+	WRITE_ASCII  ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x40) ~Exit0709~   // Exit point
+	WRITE_LONG   ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x60) 0x04         // Flags
+	SAY          ("%trig_off%" + ("%trig_num%" * 0xc4) + 0x64) #-1          // Trigger Text
 	// Code wrapup - need to adjust numbers of vertices and triggers and adjust offsets
 	WRITE_SHORT 0x80 ("%vert_num%" + 0x04) // Four new vertices
 	WRITE_SHORT 0x5a ("%trig_num%" + 0x01) // One new trigger
