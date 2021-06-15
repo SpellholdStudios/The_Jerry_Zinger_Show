@@ -1,6 +1,6 @@
 
-![Latest Release](https://img.shields.io/github/v/release/GwendolyneFreddy/The_Jerry_Zinger_Show?include_prereleases&color=darkred)<a name="top" id="top"> </a>
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/GwendolyneFreddy/The_Jerry_Zinger_Show?color=gold)
+![Latest Release](https://img.shields.io/github/v/release/SpellholdStudios/The_Jerry_Zinger_Show?include_prereleases&color=darkred)<a name="top" id="top"> </a>
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/SpellholdStudios/The_Jerry_Zinger_Show?color=gold)
 ![Platform](https://img.shields.io/static/v1?label=platform&message=windows%20%7C%20macOS%20%7C%20linux%20%7C%20Project%20Infinity&color=informational)
 ![Language](https://img.shields.io/static/v1?label=languages&message=English%20%7C%20German%20%7C%20Italian%20%7C%20Russian&color=limegreen)
 
@@ -22,11 +22,11 @@ Baldur's Gate Trilogy and EET<h3>
 
 ## 
 
-[![Created Badge](https://badges.pufler.dev/created/GwendolyneFreddy/The_Jerry_Zinger_Show?style=plastic)](https://badges.pufler.dev)
-![GitHub repo size](https://img.shields.io/github/repo-size/GwendolyneFreddy/The_Jerry_Zinger_Show?style=plastic)
-[![Visits Badge](https://badges.pufler.dev/visits/GwendolyneFreddy/The_Jerry_Zinger_Show?color=cyan&style=plastic)](https://badges.pufler.dev) 
+[![Created Badge](https://badges.pufler.dev/created/SpellholdStudios/The_Jerry_Zinger_Show?style=plastic)](https://badges.pufler.dev)
+![GitHub repo size](https://img.shields.io/github/repo-size/SpellholdStudios/The_Jerry_Zinger_Show?style=plastic)
+[![Visits Badge](https://badges.pufler.dev/visits/SpellholdStudios/The_Jerry_Zinger_Show?color=cyan&style=plastic)](https://badges.pufler.dev) 
 ![Maintenance](https://img.shields.io/static/v1?label=maintained%3F&message=yes&color=greenlight&style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/GwendolyneFreddy/The_Jerry_Zinger_Show?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/GwendolyneFreddy/The_Jerry_Zinger_Show?size=30&padding=5&bots=true)](https://badges.pufler.dev)
+![GitHub contributors](https://img.shields.io/github/contributors/SpellholdStudios/The_Jerry_Zinger_Show?color=blueviolet&style=plastic) [![Contributors Display](https://badges.pufler.dev/contributors/SpellholdStudios/The_Jerry_Zinger_Show?size=30&padding=5&bots=true)](https://badges.pufler.dev)
 
 ## 
 
