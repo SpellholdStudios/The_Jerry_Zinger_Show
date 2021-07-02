@@ -129,9 +129,9 @@ Run **`setup-jz.exe`** in your game folder to reinstall, un-install or otherwise
 
 ## 
 
-#### macOS
+#### Mac OS
 
-The Jerry Zinger Show for macOS is distributed in the same compressed archive and includes a WeiDU installer.
+The Jerry Zinger Show for Mac OS is distributed in the same compressed archive and includes a WeiDU installer.
 
 First, extract the files from the archive into your game directory. On successful extraction, there should be a :file_folder: jz folder, setup-jz and setup-jz.command files in your game folder. To install, simply double-click **`setup-jz.command`** and follow the instructions on screen.
 
@@ -258,7 +258,7 @@ A: The team is headed by Shed and SConrad. A full list listing everyone's contri
 - Updated deprecated modding tools links.
 - Re-formated, updated and renamed readme file to *jz-readme-english.html*, then moved it into new :file_folder: "*readme*" folder.
 - Lower cased files.
-- Included Linux and macOS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
+- Included Linux and Mac OS versions in the same package (thanks AL|EN's Infinity Auto Packager tool!).
 - Updated OggDec to v1.9.7 and added sox v14.4.1 for mac.
 - Added archive libiconv-1.9.2-1-src.7z with iconv licence info.
 - Updated WeiDU installer to v247.
